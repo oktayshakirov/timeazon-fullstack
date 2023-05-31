@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="item">
           <h1>About</h1>
           <span>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non risus a massa efficitur sagittis. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non risus a massa efficitur sagittis. 
           Maecenas semper, dolor vel hendrerit dapibus, est justo viverra elit, a porta odio odio id nisi. 
           Proin aliquam libero vitae mi aliquet congue. 
           Sed ut lectus turpis. Sed euismod cursus dolor, nec vulputate ipsum vulputate at. 

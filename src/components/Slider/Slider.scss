@@ -1,6 +1,6 @@
 .slider{
-    height: calc(100vh - 80px);
-    width: 100vw;
+    height: calc(70vh - 0px);
+    width: 100%;
     position: relative;
     overflow: hidden;
   
@@ -35,6 +35,8 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        background-color: rgba(9, 9, 9, 0.537);
+        color: white;
       }
     }
   }
