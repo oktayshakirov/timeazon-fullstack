@@ -12,7 +12,7 @@ const Product = () => {
   const images = ["/Banners/1.jpg", "/Banners/2.jpg"];
 
   return (
-    <div class="product">
+    <div className="product">
       <div className="left">
         <div className="images">
           <img src={images[0]} onClick={(e) => setSelectedImg(0)} />

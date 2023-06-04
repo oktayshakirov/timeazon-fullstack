@@ -10,7 +10,7 @@ const Cover = ({ item }) => {
           {item?.attributes.isNew && <span>New Product</span>}
           <img
             src={
-              process.env.REACT_APP_UPLOAD_URL +
+              import.meta.env.VITE_APP_UPLOAD_URL +
               item.attributes?.img?.data?.attributes?.url
             }
             alt=""
@@ -18,7 +18,7 @@ const Cover = ({ item }) => {
           />
           <img
             src={
-              process.env.REACT_APP_UPLOAD_URL +
+              import.meta.env.VITE_APP_UPLOAD_URL +
               item.attributes?.img2?.data?.attributes?.url
             }
             alt=""
