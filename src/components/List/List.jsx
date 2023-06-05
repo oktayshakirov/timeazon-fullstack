@@ -1,43 +1,21 @@
 import React from "react";
 import "./List.scss";
 import Cover from "../Cover/Cover";
+import useFetch from "../../hooks/useFetch";
 
-const List = () => {
-  const data = [
-    {
-      id: 1,
-      img: "/Covers/1.jpg",
-      img2: "/Covers/2.jpg",
-      title: "Product1",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 2,
-      img: "/Covers/1.jpg",
-      img2: "/Covers/2.jpg",
-      title: "Product2",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 3,
-      img: "/Covers/1.jpg",
-      img2: "/Covers/2.jpg",
-      title: "Product3",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-  ];
+const List = ({ subCats, maxPrice, sort, catId }) => {
+  const sortParam = sort ? `&sort=price:${sort}` : "";
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&[filters][categories][id]=${catId}${subCats.map(
+      (item) => `&[filters][sub_categories][id][$eq]=${item}`
+    )}&[filters][price][$lte]=${maxPrice}${sortParam}`
+  );
 
   return (
     <div className="list">
-      {data?.map((item) => (
-        <Cover item={item} key={item.id} />
-      ))}
+      {loading
+        ? "loading"
+        : data?.map((item) => <Cover item={item} key={item.id} />)}
     </div>
   );
 };
