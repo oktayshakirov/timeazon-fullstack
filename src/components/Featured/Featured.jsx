@@ -13,11 +13,10 @@ const Featured = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          non risus a massa efficitur sagittis. Maecenas semper, dolor vel
-          hendrerit dapibus, est justo viverra elit, a porta odio odio id nisi.
-          Proin aliquam libero vitae mi aliquet congue. Sed ut lectus turpis.
-          Sed euismod cursus dolor, nec vulputate ipsum vulputate at.
+          Experience the delight of wearing a watch that not only keeps you
+          punctual but also becomes an extension of your personality. Our
+          Featured Products embody the highest standards of quality, boasting
+          premium materials, impeccable finishes, and cutting-edge technology.
         </p>
       </div>
       <div className="bottom">

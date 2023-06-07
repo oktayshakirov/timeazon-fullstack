@@ -7,45 +7,36 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h1>Categories</h1>
-          <span>Category 1</span>
-          <span>Category 2</span>
-          <span>Category 3</span>
-          <span>Best Sellers</span>
-          <span>New Products</span>
+          <span>Men</span>
+          <span>Women</span>
+          <span>Kids</span>
+          <span>Smart</span>
         </div>
         <div className="item">
           <h1>Links</h1>
-          <span>FAQ</span>
-          <span>Pages</span>
-          <span>Link</span>
-          <span>Link</span>
-          <span>Link</span>
+          <span>My Portfolio</span>
+          <span>Github</span>
+          <span>Linkedin</span>
         </div>
         <div className="item">
           <h1>About</h1>
           <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non risus a massa efficitur sagittis. 
-          Maecenas semper, dolor vel hendrerit dapibus, est justo viverra elit, a porta odio odio id nisi. 
-          Proin aliquam libero vitae mi aliquet congue. 
-          Sed ut lectus turpis. Sed euismod cursus dolor, nec vulputate ipsum vulputate at. 
+            This ecommerce online watch store website was created as a school
+            project. Feel free to use it as your own and modify it as you wish.
+            Documentation and installation instructions can be found on my
+            Github repositories. The website was built with React.js for the
+            front end and Strapi for the backend.
           </span>
         </div>
         <div className="item">
           <h1>Contact</h1>
-          <span>
-            Berlin, Germany
-            </span>
-            <span>
-            +49 123 456789
-          </span>
+          <span>oktayshakirov@gmail.com</span>
         </div>
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">BLN Shop</span>
-          <span className="copyright">
-            © Copyright 2023. Oktay Shakirov
-          </span>
+          <span className="logo">Watch Shop</span>
+          <span className="copyright">© Copyright 2023. Oktay Shakirov</span>
         </div>
         <div className="right">
           <img src="/Images/payments.png" alt="" />
