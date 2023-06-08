@@ -21,9 +21,9 @@ const Featured = ({ type }) => {
       </div>
       <div className="bottom">
         {error
-          ? "Something went wrong!"
+          ? "Something went wrong! Please try again!"
           : loading
-          ? "loading"
+          ? "The website is currently loading the database. Please wait..."
           : data?.map((item) => <Cover item={item} key={item.id} />)}
       </div>
     </div>

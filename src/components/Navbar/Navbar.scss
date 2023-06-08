@@ -2,7 +2,7 @@
   height: 50px;
 
   .wrapper {
-    padding: 10px 30px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
 
@@ -61,7 +61,7 @@
     .left {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 12px;
     }
 
     .right {
@@ -97,3 +97,4 @@
     }
   }
 }
+

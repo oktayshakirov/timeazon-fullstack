@@ -91,17 +91,14 @@ const Product = () => {
               </div>
             </div>
             <div className="info">
-              <span>XXXXXXXXXXXXXX</span>
-              <span>XXXXXXXXXXXXXX</span>
-              <span>XXXXXXXXXXXXXX</span>
-            </div>
-            <hr />
-            <div className="info">
-              <span>DESCRIPTION</span>
+              <span>Disclaimer: Demo Products Only</span>
               <hr />
-              <span>ADDITIONAL INFORMATION</span>
-              <hr />
-              <span>FAQ</span>
+              <span>The products on this website are for demonstration purposes only and not available for sale. 
+              They are included to showcase the project's functionality.
+              Please note that the information displayed, including product details, descriptions, prices, and availability, 
+              is fictional and does not represent actual products or services. The images used are for illustrative purposes.
+              This website does not process transactions, and the checkout process and payment gateways are non-functional. 
+              No real purchases can be made.</span>
             </div>
           </div>
         </>

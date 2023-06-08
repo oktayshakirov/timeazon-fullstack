@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import HomeIcon from '@mui/icons-material/Home';
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import Cart from "../Cart/Cart";
@@ -25,14 +26,9 @@ const Navbar = () => {
             <img src="/Images/euro.png" />
             <KeyboardArrowDownIcon />
           </div>
-          <div className="item">
-            <Link className="link" to="/">
-              Home
-            </Link>
-          </div>
           <div className="item dropdown">
             <div className="dropdown-header">
-              <span>Categories</span>
+            <img src="/Images/watch.png" />
               <KeyboardArrowDownIcon />
             </div>
             <div className="dropdown-content">
@@ -51,6 +47,13 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <div className="center">
+        <div className="item">
+            <Link className="link" to="/">
+            <HomeIcon />
+            </Link>
+          </div>
+          </div>
         <div className="right">
           <div className="icons">
             <SearchIcon />
