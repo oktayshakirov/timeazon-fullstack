@@ -1,33 +1,70 @@
-.contact{
-    background-color: #161719;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
+.contact {
+  background: #2193b0; 
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+  background: linear-gradient(to right, #6dd5ed, #2193b0);   
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.contact .wrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact input {
+  border-radius: 8px;
+  padding: 7px 16px;
+  box-shadow: rgba(77, 79, 82, 0.2) 0px 8px 24px;
+  font-size: 0.8rem;
+  outline: none;
+  transition: 0.5s ease;
+  margin-left: 9px;
+}
+
+
+.contact button {
+  padding: 6px 18px;
+  text-align: center;
+  color: rgb(250, 250, 250);
+  cursor: pointer;
+  background-color: rgb(25, 25, 25);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.contact button:hover {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.253);
+  color: rgb(21, 21, 21);
+}
+
+.contact .icons {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1010px) {
   
-    .wrapper{
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  
-      input{
-        padding: 10px;
-        border: none;
-        border-radius: 5px 0 0  5px;
-      }
-  
-      button{
-        padding: 10px;
-        color: white;
-        background: #333;
-        border-radius: 0 5px 5px 0;
-        border: none;
-      }
-  
-      .icons{
-        display: flex;
-        gap: 10px;
-      }
-    }
+  .contact .wrapper {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .contact input,
+  .contact button {
+    width: 80%;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+  }
+}
