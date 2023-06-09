@@ -1,70 +1,68 @@
 .cover {
-  width: 300px;
-  display: flex;
+  width: 260px;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
   background: rgb(236, 236, 236);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
+  .image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
 
-  
-    .image{
+    &:hover {
+      .secondImg {
+        z-index: 2;
+      }
+    }
+
+    img {
       width: 100%;
-      height: 400px;
-      overflow: hidden;
-      position: relative;
-  
-      &:hover{
-        .secondImg{
-          z-index: 2;
-        }
-      }
-  
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-      }
-  
-      .mainImg{
-        z-index: 1;
-      }
-  
-      span{
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        background-color: rgb(255, 255, 255);
-        color: teal;
-        padding: 3px 5px;
-        z-index: 3;
-        font-weight: 500;
-        font-size: 12px;
-      }
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
     }
-  
-    h2{
-      font-size: 16px;
-      font-weight: 400;
-      padding-left: 5px;
+
+    .mainImg {
+      z-index: 1;
     }
-  
-    .prices{
-      display: flex;
-      gap: 20px;
-      padding-left: 7px;
-      padding-bottom: 5px;
-  
-      h3{
-        font-size: 18px;
-        font-weight: 500;
-  
-        &:first-child{
-          color: rgb(201, 103, 103);
-          text-decoration: line-through;
-        }
+
+    span {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-color: rgb(255, 255, 255);
+      color: teal;
+      padding: 3px 5px;
+      z-index: 3;
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 5px;
+  }
+
+  .prices {
+    display: flex;
+    gap: 20px;
+    padding-left: 7px;
+    padding-bottom: 5px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+
+      &:first-child {
+        color: rgb(201, 103, 103);
+        text-decoration: line-through;
       }
     }
   }
+}

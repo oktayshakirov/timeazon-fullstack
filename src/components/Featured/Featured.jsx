@@ -11,13 +11,10 @@ const Featured = ({ type }) => {
   return (
     <div className="featured">
       <div className="top">
-        <h1>{type} products</h1>
-        <p>
-          Experience the delight of wearing a watch that not only keeps you
-          punctual but also becomes an extension of your personality. Our
-          Featured Products embody the highest standards of quality, boasting
-          premium materials, impeccable finishes, and cutting-edge technology.
-        </p>
+        <div className="description">
+          <h1>{type} products</h1>
+          <img src="/Images/superdeals.png" />
+        </div>
       </div>
       <div className="bottom">
         {error

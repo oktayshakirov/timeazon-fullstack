@@ -28,7 +28,6 @@
       height: auto;
       object-fit: cover;
       border-radius: 50px;
-      transition: filter 0.3s;
     }
 
     button {
@@ -48,7 +47,6 @@
       text-transform: uppercase;
       font-weight: 500;
       border-radius: 25px;
-      transition: background-color 0.3s, color 0.3s, transform 0.3s;
     }
   }
 }

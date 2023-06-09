@@ -1,5 +1,19 @@
+.description {
+  background: rgba(255, 255, 255, 0.593);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(66, 136, 173, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .featured {
-  margin: 100px 200px;
+  margin: 50px;
 
   .top {
     display: flex;
@@ -10,6 +24,10 @@
     h1 {
       flex: 2;
       text-transform: capitalize;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #151515;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.351);
     }
 
     p {
@@ -20,7 +38,12 @@
 
   .bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+  }
+
+  img {
+    width: 17%;
   }
 }
