@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">Watch Shop</span>
+          <img src="/Images/logo.png" />
           <span className="copyright">© Copyright 2023. Oktay Shakirov</span>
         </div>
         <div className="right">

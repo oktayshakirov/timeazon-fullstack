@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import Cart from "../Cart/Cart";
@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
           <div className="item dropdown">
             <div className="dropdown-header">
-            <img src="/Images/watch.png" />
+              <img src="/Images/watch.png" />
               <KeyboardArrowDownIcon />
             </div>
             <div className="dropdown-content">
@@ -48,17 +48,20 @@ const Navbar = () => {
           </div>
         </div>
         <div className="center">
-        <div className="item">
+          <div className="logo">
             <Link className="link" to="/">
-            <HomeIcon />
+              <img src="/Images/logo.png" />
             </Link>
           </div>
-          </div>
+        </div>
         <div className="right">
           <div className="icons">
             <SearchIcon />
             <PersonOutlineOutlinedIcon />
-            <FavoriteBorderOutlinedIcon />
+            <div className="FavIcon">
+              <FavoriteBorderOutlinedIcon />
+              <span>0</span>
+            </div>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>

@@ -1,32 +1,32 @@
 .description {
-  background: rgba(255, 255, 255, 0.593);
+  background: #06beb6;
+  background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);
+  background: linear-gradient(to right, #48b1bf, #06beb6);
   color: rgb(0, 0, 0);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(66, 136, 173, 0.37);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.411);
 }
 
 .featured {
-  margin: 50px;
+  margin: 15px;
+  margin-bottom: 30px;
 
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     h1 {
-      flex: 2;
       text-transform: capitalize;
-      font-size: 2.5em;
-      font-weight: 700;
-      color: #151515;
+      font-size: 2.2em;
+      font-weight: 600;
+      color: #000000;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.351);
     }
 

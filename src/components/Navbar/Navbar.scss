@@ -1,5 +1,15 @@
 .navbar {
-  height: 50px;
+  flex-direction: column;
+  height: 56px;
+  width: 99%;
+  margin: auto;
+  background: #06beb6;
+  background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);
+  background: linear-gradient(to right, #48b1bf, #06beb6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.411);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 10px;
 
   .wrapper {
     padding: 10px 20px;
@@ -32,9 +42,10 @@
           position: absolute;
           top: 100%;
           left: 0;
+          border-radius: 15px;
           display: none;
           flex-direction: column;
-          background-color: #ffffff;
+          background-color: #ffffffdd;
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           padding: 10px;
           min-width: 200px;
@@ -44,10 +55,10 @@
             display: block;
             padding: 5px;
             text-decoration: none;
-            color: #000;
+            color: #000000d2;
 
             &:hover {
-              background-color: #f1f1f1;
+              background-color: #48b1bf;
             }
           }
         }
@@ -72,8 +83,10 @@
       .icons {
         display: flex;
         gap: 15px;
-        color: #48485e;
+        color: #000000;
         cursor: pointer;
+
+        // Shopping Cart
 
         .cartIcon {
           position: relative;
@@ -83,10 +96,31 @@
             width: 20px;
             height: 20px;
             border-radius: 50px;
-            background-color: rgb(103, 199, 255);
+            background-color: rgb(2, 49, 119);
             color: white;
             position: absolute;
-            right: -10px;
+            right: -11px;
+            top: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        // Favorites
+
+        .FavIcon {
+          position: relative;
+
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: rgb(209, 28, 61);
+            color: white;
+            position: absolute;
+            right: -11px;
             top: -10px;
             display: flex;
             align-items: center;
@@ -98,3 +132,8 @@
   }
 }
 
+@media (max-width: 600px) {
+  .center {
+    display: none;
+  }
+}
