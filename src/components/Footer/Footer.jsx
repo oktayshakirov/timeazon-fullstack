@@ -7,30 +7,54 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h1>Categories</h1>
-          <span>Men</span>
-          <span>Women</span>
-          <span>Kids</span>
-          <span>Smart</span>
+          <span>
+            <a href="/products/3">Men</a>
+          </span>
+          <span>
+            <a href="/products/4">Women</a>
+          </span>
+          <span>
+            <a href="/products/5">Kids</a>
+          </span>
+          <span>
+            <a href="/products/6">Smart</a>
+          </span>
         </div>
         <div className="item">
-          <h1>Links</h1>
-          <span>My Portfolio</span>
-          <span>Github</span>
-          <span>Linkedin</span>
+          <h1>Contact Me</h1>
+          <span>
+            <a href="https://www.oktayshakirov.com/">Portfolio</a>
+          </span>
+          <span>
+            <a href="/https://github.com/oktayshakirov">Github</a>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/in/oktayshakirov">Linkedin</a>
+          </span>
+          <span>
+            <a href="https://twitter.com/oktayshakirov">Twitter</a>
+          </span>
         </div>
         <div className="item">
           <h1>About</h1>
           <span>
-            This ecommerce online watch store website was created as a school
-            project. Feel free to use it as your own and modify it as you wish.
-            Documentation and installation instructions can be found on my
-            Github repositories. The website was built with React.js for the
-            front end and Strapi for the backend.
+            This ecommerce online shop was created as a school project,
+            utilizing React.js for the frontend and Strapi for the backend. You
+            can find more of my projects in my portfolio, where you can learn
+            more about what I do and explore the various projects I have
+            undertaken.
           </span>
         </div>
         <div className="item">
-          <h1>Contact</h1>
-          <span>oktayshakirov@gmail.com</span>
+          <h1>License</h1>
+          <span>
+            Permission is granted to freely use, copy, modify, merge, publish,
+            distribute, sublicense, and sell the Software, subject to the
+            following conditions: include the copyright notice and this
+            permission notice in all copies or substantial portions of the
+            Software. Translation: You can use this for your project, just
+            attribute the source. :)
+          </span>
         </div>
       </div>
       <div className="bottom">

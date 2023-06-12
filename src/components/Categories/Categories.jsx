@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <div className="categories">
+      <div className="description">
+        <h1>&#8986; Shop by Category: </h1>
+      </div>
       <div className="box">
         <img src="/Categories/men.jpg" />
         <button>
