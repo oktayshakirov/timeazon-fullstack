@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 10:37 PM
+-- Generation Time: Jun 12, 2023 at 09:02 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,8 +18,253 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+-- Database: `pizzalieferung`
+--
+CREATE DATABASE IF NOT EXISTS `pizzalieferung` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `pizzalieferung`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `getranke`
+--
+
+CREATE TABLE `getranke` (
+  `getraenk_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `preis` decimal(4,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `getrankepositionen`
+--
+
+CREATE TABLE `getrankepositionen` (
+  `getraenkposition_id` int(11) NOT NULL,
+  `lieferung_id` int(11) NOT NULL,
+  `getraenk_id` int(11) NOT NULL,
+  `anzahl` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kunden`
+--
+
+CREATE TABLE `kunden` (
+  `kunden_id` int(11) NOT NULL,
+  `vorname` varchar(255) NOT NULL,
+  `nachname` varchar(255) NOT NULL,
+  `plz` varchar(10) NOT NULL,
+  `ort` varchar(255) NOT NULL,
+  `strasse_nr` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kunden`
+--
+
+INSERT INTO `kunden` (`kunden_id`, `vorname`, `nachname`, `plz`, `ort`, `strasse_nr`) VALUES
+(1, 'Oktay', 'Shakirov', '13593', 'Berlin', 'Blasewitze Ring 16'),
+(2, 'Anna', 'Schmidt', '67890', 'Frankfurt', 'Dresdener Strasse 25'),
+(3, 'Maximilian', 'Meier', '23643', 'Munchen', 'Berliner Strasse 333');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lieferpositionen`
+--
+
+CREATE TABLE `lieferpositionen` (
+  `lieferposition_id` int(11) NOT NULL,
+  `lieferung_id` int(11) NOT NULL,
+  `pizza_id` int(11) NOT NULL,
+  `topping_id` int(11) NOT NULL,
+  `anzahl` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lieferungen`
+--
+
+CREATE TABLE `lieferungen` (
+  `lieferung_id` int(11) NOT NULL,
+  `kunden_id` int(11) NOT NULL,
+  `lieferdatum` date NOT NULL,
+  `lieferzeit` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lieferungen`
+--
+
+INSERT INTO `lieferungen` (`lieferung_id`, `kunden_id`, `lieferdatum`, `lieferzeit`) VALUES
+(1, 1, '2023-05-17', '00:25:06'),
+(2, 2, '2023-05-18', '01:13:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pizzen`
+--
+
+CREATE TABLE `pizzen` (
+  `pizza_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `basispreis` decimal(4,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pizzen`
+--
+
+INSERT INTO `pizzen` (`pizza_id`, `name`, `basispreis`) VALUES
+(1, 'Margherita', '4.00'),
+(2, 'Salami', '5.00'),
+(3, 'Funghi', '3.00'),
+(4, 'Quattro', '5.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `topping`
+--
+
+CREATE TABLE `topping` (
+  `topping_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `preis` decimal(4,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `topping`
+--
+
+INSERT INTO `topping` (`topping_id`, `name`, `preis`) VALUES
+(1, 'Truffel', '3.00'),
+(2, 'Champignon', '1.00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `getranke`
+--
+ALTER TABLE `getranke`
+  ADD PRIMARY KEY (`getraenk_id`);
+
+--
+-- Indexes for table `getrankepositionen`
+--
+ALTER TABLE `getrankepositionen`
+  ADD PRIMARY KEY (`getraenkposition_id`),
+  ADD KEY `lieferung_id` (`lieferung_id`),
+  ADD KEY `getraenk_id` (`getraenk_id`);
+
+--
+-- Indexes for table `kunden`
+--
+ALTER TABLE `kunden`
+  ADD PRIMARY KEY (`kunden_id`);
+
+--
+-- Indexes for table `lieferpositionen`
+--
+ALTER TABLE `lieferpositionen`
+  ADD PRIMARY KEY (`lieferposition_id`);
+
+--
+-- Indexes for table `lieferungen`
+--
+ALTER TABLE `lieferungen`
+  ADD PRIMARY KEY (`lieferung_id`),
+  ADD KEY `kunden_id` (`kunden_id`);
+
+--
+-- Indexes for table `pizzen`
+--
+ALTER TABLE `pizzen`
+  ADD PRIMARY KEY (`pizza_id`);
+
+--
+-- Indexes for table `topping`
+--
+ALTER TABLE `topping`
+  ADD PRIMARY KEY (`topping_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `getranke`
+--
+ALTER TABLE `getranke`
+  MODIFY `getraenk_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `getrankepositionen`
+--
+ALTER TABLE `getrankepositionen`
+  MODIFY `getraenkposition_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kunden`
+--
+ALTER TABLE `kunden`
+  MODIFY `kunden_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `lieferpositionen`
+--
+ALTER TABLE `lieferpositionen`
+  MODIFY `lieferposition_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `lieferungen`
+--
+ALTER TABLE `lieferungen`
+  MODIFY `lieferung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pizzen`
+--
+ALTER TABLE `pizzen`
+  MODIFY `pizza_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `topping`
+--
+ALTER TABLE `topping`
+  MODIFY `topping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `getrankepositionen`
+--
+ALTER TABLE `getrankepositionen`
+  ADD CONSTRAINT `getrankepositionen_ibfk_1` FOREIGN KEY (`lieferung_id`) REFERENCES `lieferungen` (`lieferung_id`),
+  ADD CONSTRAINT `getrankepositionen_ibfk_2` FOREIGN KEY (`getraenk_id`) REFERENCES `getranke` (`getraenk_id`);
+
+--
+-- Constraints for table `lieferungen`
+--
+ALTER TABLE `lieferungen`
+  ADD CONSTRAINT `lieferungen_ibfk_1` FOREIGN KEY (`kunden_id`) REFERENCES `kunden` (`kunden_id`);
+--
 -- Database: `watch_store`
 --
+CREATE DATABASE IF NOT EXISTS `watch_store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `watch_store`;
 
 -- --------------------------------------------------------
 
@@ -373,7 +618,7 @@ CREATE TABLE `files` (
 INSERT INTO `files` (`id`, `name`, `alternative_text`, `caption`, `width`, `height`, `formats`, `hash`, `ext`, `mime`, `size`, `url`, `preview_url`, `provider`, `provider_metadata`, `folder_path`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`) VALUES
 (40, 'adidas_sport.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_adidas_sport.jpg\",\"hash\":\"thumbnail_adidas_sport_904b040fc3\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.19,\"url\":\"/uploads/thumbnail_adidas_sport_904b040fc3.jpg\"}}', 'adidas_sport_904b040fc3', '.jpg', 'image/jpeg', '31.31', '/uploads/adidas_sport_904b040fc3.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.078000', '2023-06-08 21:31:40.078000', 1, 1),
 (41, 'adidas_sport2.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_adidas_sport2.jpg\",\"hash\":\"thumbnail_adidas_sport2_41ddf92038\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":2.38,\"url\":\"/uploads/thumbnail_adidas_sport2_41ddf92038.jpg\"}}', 'adidas_sport2_41ddf92038', '.jpg', 'image/jpeg', '21.74', '/uploads/adidas_sport2_41ddf92038.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.083000', '2023-06-08 21:31:40.083000', 1, 1),
-(42, 'versace_versus_men.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_versace_versus_men.jpg\",\"hash\":\"thumbnail_versace_versus_men_f57a0a4ed2\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.68,\"url\":\"/uploads/thumbnail_versace_versus_men_f57a0a4ed2.jpg\"}}', 'versace_versus_men_f57a0a4ed2', '.jpg', 'image/jpeg', '41.44', '/uploads/versace_versus_men_f57a0a4ed2.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.083000', '2023-06-08 21:31:40.083000', 1, 1),
+(42, 'versace_versus_men.jpg', NULL, NULL, 562, 707, '{\"thumbnail\":{\"name\":\"thumbnail_versace_versus_men.jpg\",\"hash\":\"thumbnail_versace_versus_men_f57a0a4ed2\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":124,\"height\":156,\"size\":3.98,\"url\":\"/uploads/thumbnail_versace_versus_men_f57a0a4ed2.jpg\"}}', 'versace_versus_men_f57a0a4ed2', '.jpg', 'image/jpeg', '34.51', '/uploads/versace_versus_men_f57a0a4ed2.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.083000', '2023-06-09 14:39:26.558000', 1, 1),
 (43, 'versace_versus_men2.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_versace_versus_men2.jpg\",\"hash\":\"thumbnail_versace_versus_men2_f8ec4f1e4f\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":2.78,\"url\":\"/uploads/thumbnail_versace_versus_men2_f8ec4f1e4f.jpg\"}}', 'versace_versus_men2_f8ec4f1e4f', '.jpg', 'image/jpeg', '27.59', '/uploads/versace_versus_men2_f8ec4f1e4f.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.116000', '2023-06-08 21:31:40.116000', 1, 1),
 (44, 'adidas_women.png', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_adidas_women.png\",\"hash\":\"thumbnail_adidas_women_376fe264aa\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":128,\"height\":156,\"size\":2.51,\"url\":\"/uploads/thumbnail_adidas_women_376fe264aa.png\"}}', 'adidas_women_376fe264aa', '.png', 'image/png', '25.39', '/uploads/adidas_women_376fe264aa.png', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.307000', '2023-06-08 21:31:40.307000', 1, 1),
 (45, 'adidas_women2.png', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_adidas_women2.png\",\"hash\":\"thumbnail_adidas_women2_5d17de74ce\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":128,\"height\":156,\"size\":2.35,\"url\":\"/uploads/thumbnail_adidas_women2_5d17de74ce.png\"}}', 'adidas_women2_5d17de74ce', '.png', 'image/png', '25.94', '/uploads/adidas_women2_5d17de74ce.png', NULL, 'local', NULL, '/', '2023-06-08 21:31:40.412000', '2023-06-08 21:31:40.412000', 1, 1),
@@ -410,7 +655,19 @@ INSERT INTO `files` (`id`, `name`, `alternative_text`, `caption`, `width`, `heig
 (77, 'swis_male2.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_swis_male2.jpg\",\"hash\":\"thumbnail_swis_male2_8a52a8838c\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":4.05,\"url\":\"/uploads/thumbnail_swis_male2_8a52a8838c.jpg\"}}', 'swis_male2_8a52a8838c', '.jpg', 'image/jpeg', '43.85', '/uploads/swis_male2_8a52a8838c.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:42.459000', '2023-06-08 21:31:42.459000', 1, 1),
 (78, 'tommy_hilfiger_women.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_tommy_hilfiger_women.jpg\",\"hash\":\"thumbnail_tommy_hilfiger_women_784bd59a22\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.43,\"url\":\"/uploads/thumbnail_tommy_hilfiger_women_784bd59a22.jpg\"}}', 'tommy_hilfiger_women_784bd59a22', '.jpg', 'image/jpeg', '43.97', '/uploads/tommy_hilfiger_women_784bd59a22.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:42.533000', '2023-06-08 21:31:42.533000', 1, 1),
 (79, 'tommy_hilfiger_women2.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_tommy_hilfiger_women2.jpg\",\"hash\":\"thumbnail_tommy_hilfiger_women2_9438939a7d\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":4.83,\"url\":\"/uploads/thumbnail_tommy_hilfiger_women2_9438939a7d.jpg\"}}', 'tommy_hilfiger_women2_9438939a7d', '.jpg', 'image/jpeg', '67.64', '/uploads/tommy_hilfiger_women2_9438939a7d.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:31:42.600000', '2023-06-08 21:31:42.600000', 1, 1),
-(80, 'mkuu3_vw_pf_watch-44-alum-gold-nc-se_vw_pf_wf_co_geo_ae.jpg', NULL, NULL, 700, 700, '{\"thumbnail\":{\"name\":\"thumbnail_mkuu3_vw_pf_watch-44-alum-gold-nc-se_vw_pf_wf_co_geo_ae.jpg\",\"hash\":\"thumbnail_mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":156,\"height\":156,\"size\":4.19,\"url\":\"/uploads/thumbnail_mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78.jpg\"}}', 'mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78', '.jpg', 'image/jpeg', '37.85', '/uploads/mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:34:49.147000', '2023-06-08 21:34:49.147000', 1, 1);
+(80, 'mkuu3_vw_pf_watch-44-alum-gold-nc-se_vw_pf_wf_co_geo_ae.jpg', NULL, NULL, 700, 700, '{\"thumbnail\":{\"name\":\"thumbnail_mkuu3_vw_pf_watch-44-alum-gold-nc-se_vw_pf_wf_co_geo_ae.jpg\",\"hash\":\"thumbnail_mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":156,\"height\":156,\"size\":4.19,\"url\":\"/uploads/thumbnail_mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78.jpg\"}}', 'mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78', '.jpg', 'image/jpeg', '37.85', '/uploads/mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78.jpg', NULL, 'local', NULL, '/', '2023-06-08 21:34:49.147000', '2023-06-08 21:34:49.147000', 1, 1),
+(82, 'gshock_gold2.png', NULL, NULL, 730, 811, '{\"thumbnail\":{\"name\":\"thumbnail_gshock_gold2.png\",\"hash\":\"thumbnail_gshock_gold2_0c2c0d7a6e\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":140,\"height\":156,\"size\":31.46,\"url\":\"/uploads/thumbnail_gshock_gold2_0c2c0d7a6e.png\"}}', 'gshock_gold2_0c2c0d7a6e', '.png', 'image/png', '172.34', '/uploads/gshock_gold2_0c2c0d7a6e.png', NULL, 'local', NULL, '/', '2023-06-12 19:51:23.785000', '2023-06-12 20:55:53.259000', 1, 1),
+(83, 'gshock_gold.png', NULL, NULL, 1457, 1457, '{\"thumbnail\":{\"name\":\"thumbnail_gshock_gold.png\",\"hash\":\"thumbnail_gshock_gold_331d165b63\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":156,\"height\":156,\"size\":5.11,\"url\":\"/uploads/thumbnail_gshock_gold_331d165b63.png\"}}', 'gshock_gold_331d165b63', '.png', 'image/png', '247.23', '/uploads/gshock_gold_331d165b63.png', NULL, 'local', NULL, '/', '2023-06-12 19:52:34.384000', '2023-06-12 19:52:34.384000', 1, 1),
+(84, 'kiddus2.png', NULL, NULL, 427, 694, '{\"thumbnail\":{\"name\":\"thumbnail_kiddus2.png\",\"hash\":\"thumbnail_kiddus2_d728cacef1\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":96,\"height\":156,\"size\":5.46,\"url\":\"/uploads/thumbnail_kiddus2_d728cacef1.png\"}}', 'kiddus2_d728cacef1', '.png', 'image/png', '18.97', '/uploads/kiddus2_d728cacef1.png', NULL, 'local', NULL, '/', '2023-06-12 19:59:09.331000', '2023-06-12 19:59:09.331000', 1, 1),
+(85, 'kiddus.png', NULL, NULL, 486, 664, '{\"thumbnail\":{\"name\":\"thumbnail_kiddus.png\",\"hash\":\"thumbnail_kiddus_143cacff4b\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":114,\"height\":156,\"size\":19.11,\"url\":\"/uploads/thumbnail_kiddus_143cacff4b.png\"}}', 'kiddus_143cacff4b', '.png', 'image/png', '65.80', '/uploads/kiddus_143cacff4b.png', NULL, 'local', NULL, '/', '2023-06-12 19:59:09.661000', '2023-06-12 19:59:09.661000', 1, 1),
+(86, 'MarcLauder.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_MarcLauder.jpg\",\"hash\":\"thumbnail_Marc_Lauder_f2aeaa5196\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.45,\"url\":\"/uploads/thumbnail_Marc_Lauder_f2aeaa5196.jpg\"}}', 'Marc_Lauder_f2aeaa5196', '.jpg', 'image/jpeg', '55.67', '/uploads/Marc_Lauder_f2aeaa5196.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:06:38.777000', '2023-06-12 20:06:38.777000', 1, 1),
+(87, 'MarcLauder2.jpg', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_MarcLauder2.jpg\",\"hash\":\"thumbnail_Marc_Lauder2_7ec0242f4e\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.72,\"url\":\"/uploads/thumbnail_Marc_Lauder2_7ec0242f4e.jpg\"}}', 'Marc_Lauder2_7ec0242f4e', '.jpg', 'image/jpeg', '38.59', '/uploads/Marc_Lauder2_7ec0242f4e.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:06:38.948000', '2023-06-12 20:06:38.948000', 1, 1),
+(88, 'boss_orange2.png', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_boss_orange2.png\",\"hash\":\"thumbnail_boss_orange2_0d96b832f3\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.89,\"url\":\"/uploads/thumbnail_boss_orange2_0d96b832f3.png\"}}', 'boss_orange2_0d96b832f3', '.png', 'image/png', '42.90', '/uploads/boss_orange2_0d96b832f3.png', NULL, 'local', NULL, '/', '2023-06-12 20:13:50.405000', '2023-06-12 20:13:50.405000', 1, 1),
+(89, 'boss_orange.png', NULL, NULL, 620, 757, '{\"thumbnail\":{\"name\":\"thumbnail_boss_orange.png\",\"hash\":\"thumbnail_boss_orange_278d2db8ae\",\"ext\":\".png\",\"mime\":\"image/png\",\"path\":null,\"width\":128,\"height\":156,\"size\":3.27,\"url\":\"/uploads/thumbnail_boss_orange_278d2db8ae.png\"}}', 'boss_orange_278d2db8ae', '.png', 'image/png', '35.72', '/uploads/boss_orange_278d2db8ae.png', NULL, 'local', NULL, '/', '2023-06-12 20:13:50.689000', '2023-06-12 20:13:50.689000', 1, 1),
+(98, 'samsung.jpg', NULL, NULL, 1212, 1489, '{\"thumbnail\":{\"name\":\"thumbnail_samsung.jpg\",\"hash\":\"thumbnail_samsung_349571c6fb\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":127,\"height\":156,\"size\":4.38,\"url\":\"/uploads/thumbnail_samsung_349571c6fb.jpg\"}}', 'samsung_349571c6fb', '.jpg', 'image/jpeg', '81.24', '/uploads/samsung_349571c6fb.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:28:58.387000', '2023-06-12 20:28:58.387000', 1, 1),
+(99, 'samsung3.jpg', NULL, NULL, 1212, 1489, '{\"thumbnail\":{\"name\":\"thumbnail_samsung3.jpg\",\"hash\":\"thumbnail_samsung3_770792e163\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":127,\"height\":156,\"size\":3.96,\"url\":\"/uploads/thumbnail_samsung3_770792e163.jpg\"}}', 'samsung3_770792e163', '.jpg', 'image/jpeg', '89.55', '/uploads/samsung3_770792e163.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:30:39.601000', '2023-06-12 20:30:39.601000', 1, 1),
+(100, 'tsar_bomb2.jpg', NULL, NULL, 679, 716, '{\"thumbnail\":{\"name\":\"thumbnail_tsar_bomb2.jpg\",\"hash\":\"thumbnail_tsar_bomb2_05f016bbeb\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":148,\"height\":156,\"size\":3.79,\"url\":\"/uploads/thumbnail_tsar_bomb2_05f016bbeb.jpg\"}}', 'tsar_bomb2_05f016bbeb', '.jpg', 'image/jpeg', '40.33', '/uploads/tsar_bomb2_05f016bbeb.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:34:15.311000', '2023-06-12 20:34:15.311000', 1, 1),
+(102, 'tsar_bomb.jpg', NULL, NULL, 679, 716, '{\"thumbnail\":{\"name\":\"thumbnail_tsar_bomb.jpg\",\"hash\":\"thumbnail_tsar_bomb_7588e4887d\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"path\":null,\"width\":148,\"height\":156,\"size\":5.01,\"url\":\"/uploads/thumbnail_tsar_bomb_7588e4887d.jpg\"}}', 'tsar_bomb_7588e4887d', '.jpg', 'image/jpeg', '72.93', '/uploads/tsar_bomb_7588e4887d.jpg', NULL, 'local', NULL, '/', '2023-06-12 20:35:48.270000', '2023-06-12 20:35:48.270000', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -455,26 +712,14 @@ INSERT INTO `files_related_morphs` (`id`, `file_id`, `related_id`, `related_type
 (74, 71, 24, 'api::product.product', 'img2', 1),
 (75, 40, 22, 'api::product.product', 'img', 1),
 (76, 41, 22, 'api::product.product', 'img2', 1),
-(77, 70, 25, 'api::product.product', 'img', 1),
-(78, 68, 25, 'api::product.product', 'img2', 1),
 (83, 64, 27, 'api::product.product', 'img', 1),
 (84, 66, 27, 'api::product.product', 'img2', 1),
-(85, 76, 28, 'api::product.product', 'img', 1),
-(86, 77, 28, 'api::product.product', 'img2', 1),
-(91, 69, 29, 'api::product.product', 'img', 1),
-(92, 73, 29, 'api::product.product', 'img2', 1),
-(95, 60, 26, 'api::product.product', 'img', 1),
-(96, 61, 26, 'api::product.product', 'img2', 1),
 (101, 58, 31, 'api::product.product', 'img', 1),
 (102, 59, 31, 'api::product.product', 'img2', 1),
 (103, 75, 32, 'api::product.product', 'img', 1),
 (104, 72, 32, 'api::product.product', 'img2', 1),
 (105, 53, 33, 'api::product.product', 'img', 1),
 (106, 52, 33, 'api::product.product', 'img2', 1),
-(107, 47, 34, 'api::product.product', 'img', 1),
-(108, 49, 34, 'api::product.product', 'img2', 1),
-(109, 56, 30, 'api::product.product', 'img', 1),
-(110, 57, 30, 'api::product.product', 'img2', 1),
 (111, 65, 35, 'api::product.product', 'img', 1),
 (112, 67, 35, 'api::product.product', 'img2', 1),
 (115, 45, 36, 'api::product.product', 'img', 1),
@@ -483,8 +728,32 @@ INSERT INTO `files_related_morphs` (`id`, `file_id`, `related_id`, `related_type
 (118, 55, 37, 'api::product.product', 'img2', 1),
 (119, 63, 38, 'api::product.product', 'img', 1),
 (120, 62, 38, 'api::product.product', 'img2', 1),
-(121, 50, 39, 'api::product.product', 'img', 1),
-(122, 51, 39, 'api::product.product', 'img2', 1);
+(133, 69, 29, 'api::product.product', 'img', 1),
+(134, 73, 29, 'api::product.product', 'img2', 1),
+(141, 47, 34, 'api::product.product', 'img', 1),
+(142, 49, 34, 'api::product.product', 'img2', 1),
+(143, 76, 28, 'api::product.product', 'img', 1),
+(144, 77, 28, 'api::product.product', 'img2', 1),
+(145, 70, 25, 'api::product.product', 'img', 1),
+(146, 68, 25, 'api::product.product', 'img2', 1),
+(147, 85, 41, 'api::product.product', 'img', 1),
+(148, 84, 41, 'api::product.product', 'img2', 1),
+(149, 86, 42, 'api::product.product', 'img', 1),
+(150, 87, 42, 'api::product.product', 'img2', 1),
+(153, 56, 30, 'api::product.product', 'img', 1),
+(154, 57, 30, 'api::product.product', 'img2', 1),
+(155, 89, 43, 'api::product.product', 'img', 1),
+(156, 88, 43, 'api::product.product', 'img2', 1),
+(157, 60, 26, 'api::product.product', 'img', 1),
+(158, 61, 26, 'api::product.product', 'img2', 1),
+(175, 50, 39, 'api::product.product', 'img', 1),
+(176, 51, 39, 'api::product.product', 'img2', 1),
+(179, 99, 44, 'api::product.product', 'img', 1),
+(180, 98, 44, 'api::product.product', 'img2', 1),
+(183, 102, 45, 'api::product.product', 'img', 1),
+(184, 100, 45, 'api::product.product', 'img2', 1),
+(185, 83, 40, 'api::product.product', 'img', 1),
+(186, 82, 40, 'api::product.product', 'img2', 1);
 
 -- --------------------------------------------------------
 
@@ -539,21 +808,27 @@ INSERT INTO `products` (`id`, `title`, `desc`, `price`, `is_new`, `created_at`, 
 (22, 'Adidas Digital Two ', 'The Adidas Digital Two watch is a modern and stylish timepiece that combines functionality with the iconic Adidas aesthetic. This watch features a digital dial with a light-up feature, ensuring visibility even in low-light conditions.\n\nThe watch is housed in a 36mm brushed gold-tone stainless steel case, adding a touch of elegance to the sporty design. The bracelet is also made of brushed gold-tone stainless steel, providing durability and a cohesive look. The Adidas logo is prominently displayed on the back case and buckle, showcasing the brand\'s identity.\n\nThe Digital Two watch comes with a range of functions, including hours, minutes, seconds, date, alarm, stopwatch, and countdown timer, making it a versatile accessory for everyday wear.\n\nThe watch is water-resistant up to 50 meters, making it suitable for light water activities but not for diving or snorkeling.', '77.89', 0, '2023-06-08 21:48:04.434000', '2023-06-08 21:56:48.024000', '2023-06-08 21:48:05.389000', 1, 1, 'normal'),
 (23, 'Tommy Hilfiger', 'The Tommy Hilfiger Analog Gray Dial Women\'s Watch-TH1782263W is an elegant and timeless piece that embodies the brand\'s classic American cool style. This watch features a sophisticated gray dial housed in a durable stainless steel case. The silver stainless steel band adds a touch of class and ensures a comfortable fit. Powered by quartz movement, this watch offers precise timekeeping. With a water resistance depth of 30 meters, it can withstand splashes or brief immersion in water. This watch is a perfect blend of style and functionality, making it a great accessory for any occasion.', '107.89', 1, '2023-06-08 21:52:24.217000', '2023-06-08 21:52:25.184000', '2023-06-08 21:52:25.179000', 1, 1, 'trending'),
 (24, 'Disney Mickey Mouse', 'The Disney Mickey Mouse Watch for Kids is a fun and educational accessory that your child will love. This watch features a vibrant design with Mickey Mouse characters that will delight any Disney fan.\n\nThe watch comes with a variety of kid-friendly features. It includes a selfie camera for taking pictures, a photo album viewer, a video player, a voice recorder, a calculator, an alarm clock, a pedometer step counter, various playable games, and changeable watch faces.\n\nDesigned with a red and black color scheme, this watch has a 40mm screen size and a square shape that\'s easy for kids to read. It\'s also compatible with smartphones, making it a versatile accessory for your child.\n\nThe watch is powered by a long-lasting rechargeable battery, eliminating the need for frequent battery replacements. It comes with a USB charging cable for your convenience.', '14.99', 0, '2023-06-08 21:55:49.279000', '2023-06-08 21:56:13.766000', '2023-06-08 21:55:50.980000', 1, 1, 'normal'),
-(25, 'Michael Kors Liliane', 'The Michael Kors LILIANE SET is a luxurious and elegant accessory set that includes a watch and a bracelet. The watch features a three-hand movement housed in a 36mm rose gold-tone stainless steel case. The dial is a beautiful shade of pink, adding a touch of femininity to the piece.\n\nThe watch strap, made of stainless steel, is also in a rose gold tone, matching the case and creating a cohesive and stylish look. The strap is 16mm wide and closes with a bracelet deployant closure, ensuring a secure fit.\n\nThe set also includes a matching rose gold-tone stainless steel bracelet with a slider closure. This bracelet adds an extra touch of sophistication to the set, making it a perfect gift for someone special or a treat for yourself.\n\nThe watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling.', '174.95', 0, '2023-06-08 21:59:15.064000', '2023-06-08 21:59:16.348000', '2023-06-08 21:59:16.345000', 1, 1, 'featured'),
-(26, 'Apple Watch Series 7', 'The Apple Watch Series 7 is a cutting-edge smartwatch that combines style, functionality, and health-focused features. This watch features a larger Always-On Retina LTPO OLED display, offering a clear and bright view even under sunlight. It is powered by the S7 with a 64-bit dual-core processor, ensuring smooth performance and quick app launches.\n\nThe watch supports LTE and UMTS, Wi-Fi, and Bluetooth connectivity, allowing you to stay connected even without your iPhone nearby. It includes a range of health features such as a blood oxygen sensor, an electrical heart sensor (ECG app), and a third-generation optical heart sensor.\n\nWith a storage capacity of 32GB, you can store your favorite apps, music, podcasts, and more. The watch offers up to 18 hours of battery life and comes with a USB-C magnetic fast charging cable. It is water-resistant up to 50 meters, making it suitable for shallow-water activities like swimming.\n\nDesigned with environmental considerations, the watch is made with 100% recycled aluminum in the case and 100% recycled tungsten in the Taptic Engine. The Apple Watch Series 7 is a perfect blend of style, functionality, and health-focused features, making it a great accessory for any lifestyle.', '425.79', 0, '2023-06-08 22:01:16.690000', '2023-06-08 22:14:27.961000', '2023-06-08 22:01:54.661000', 1, 1, 'normal'),
+(25, 'Michael Kors Liliane', 'The Michael Kors LILIANE SET is a luxurious and elegant accessory set that includes a watch and a bracelet. The watch features a three-hand movement housed in a 36mm rose gold-tone stainless steel case. The dial is a beautiful shade of pink, adding a touch of femininity to the piece.\n\nThe watch strap, made of stainless steel, is also in a rose gold tone, matching the case and creating a cohesive and stylish look. The strap is 16mm wide and closes with a bracelet deployant closure, ensuring a secure fit.\n\nThe set also includes a matching rose gold-tone stainless steel bracelet with a slider closure. This bracelet adds an extra touch of sophistication to the set, making it a perfect gift for someone special or a treat for yourself.\n\nThe watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling.', '174.95', 0, '2023-06-08 21:59:15.064000', '2023-06-12 19:55:56.269000', '2023-06-08 21:59:16.345000', 1, 1, 'trending'),
+(26, 'Apple Watch Series 7', 'The Apple Watch Series 7 is a cutting-edge smartwatch that combines style, functionality, and health-focused features. This watch features a larger Always-On Retina LTPO OLED display, offering a clear and bright view even under sunlight. It is powered by the S7 with a 64-bit dual-core processor, ensuring smooth performance and quick app launches.\n\nThe watch supports LTE and UMTS, Wi-Fi, and Bluetooth connectivity, allowing you to stay connected even without your iPhone nearby. It includes a range of health features such as a blood oxygen sensor, an electrical heart sensor (ECG app), and a third-generation optical heart sensor.\n\nWith a storage capacity of 32GB, you can store your favorite apps, music, podcasts, and more. The watch offers up to 18 hours of battery life and comes with a USB-C magnetic fast charging cable. It is water-resistant up to 50 meters, making it suitable for shallow-water activities like swimming.\n\nDesigned with environmental considerations, the watch is made with 100% recycled aluminum in the case and 100% recycled tungsten in the Taptic Engine. The Apple Watch Series 7 is a perfect blend of style, functionality, and health-focused features, making it a great accessory for any lifestyle.', '425.79', 0, '2023-06-08 22:01:16.690000', '2023-06-12 20:14:55.227000', '2023-06-08 22:01:54.661000', 1, 1, 'normal'),
 (27, 'Lacoste', 'The Lacoste Kids Watch is a vibrant and playful timepiece designed for children. This watch features a blue dial and a blue silicone strap, making it a fun and colorful accessory for your child.\n\nThe watch has a plastic case with a diameter of 32mm, making it a suitable size for children\'s wrists. The dial includes Arabic numerals, making it easy for kids to read the time.\n\nThe Lacoste Kids Watch is water-resistant up to 5 ATM, meaning it can withstand splashes or brief immersion in water, but it is not suitable for swimming or bathing.\n\nThe watch is powered by a quartz movement, ensuring accurate timekeeping. The silicone strap is durable and comfortable for everyday wear, and it comes with a buckle clasp for secure fastening.', '69.95', 1, '2023-06-08 22:04:01.015000', '2023-06-08 22:04:01.876000', '2023-06-08 22:04:01.873000', 1, 1, 'normal'),
-(28, 'Swiss Alpine Military', 'The Swiss Alpine Military Watch is a robust and stylish timepiece designed for men who appreciate precision and durability. This watch features a 43mm stainless steel case with a matted, polished surface, giving it a striking appearance. The dial is black, with illuminated indexes and hands for easy readability even in low light conditions.\n\nThe watch is powered by a quartz movement, ensuring accurate timekeeping. It comes with a chronograph function, adding to its utility. The watch is water-resistant up to 10 ATM, making it suitable for recreational swimming and snorkeling.\n\nThe Swiss Alpine Military Watch is fitted with a real leather strap, providing comfort and durability. Its design is a perfect blend of elegance and functionality, making it an ideal accessory for both casual and formal occasions.', '645.89', 0, '2023-06-08 22:07:12.708000', '2023-06-08 22:07:13.696000', '2023-06-08 22:07:13.693000', 1, 1, 'featured'),
-(29, 'Michael Kors Runway', 'The Michael Kors Slim Runway Watch is a sleek and sophisticated timepiece that embodies the brand\'s signature style. This watch features a minimalist design with a 44mm case size, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel bracelet with a brushed and polished finish, offering both comfort and durability. The round sunray dial adds to the sleek aesthetic of the watch, making it a perfect accessory for both casual and formal occasions.\n\nThe Slim Runway Watch is water-resistant up to 50m (165ft), making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nMichael Kors is a world-renowned, award-winning designer of luxury accessories and ready-to-wear with an innate sense of glamour and an unfailing eye for timeless chic. The Slim Runway Watch is a testament to this, offering luxurious style with a modern splash of trend-right touches.', '249.00', 0, '2023-06-08 22:09:59.188000', '2023-06-08 22:11:09.369000', '2023-06-08 22:10:00.171000', 1, 1, 'trending'),
-(30, 'Fossil Gen 6', 'The Fossil Gen 6 is a sophisticated smartwatch that combines style, functionality, and advanced health tracking features. This watch features a 1.28-inch AMOLED touchscreen display housed in a 44mm stainless steel casing, offering a clear and bright view for easy navigation.\n\nThe watch is powered by the Qualcomm Snapdragon Wear 4100+ chipset, ensuring smooth performance and quick app launches. It comes with 1GB of RAM and 8GB of storage, allowing you to store your favorite apps and music.\n\nThe Gen 6 includes a range of health features such as continuous heart rate monitoring, blood oxygen level measurement, automatic workout detection, and cardio fitness estimations using VO2 Max. It also supports offline Spotify playback for Spotify Premium subscribers.\n\nThe watch offers Bluetooth 5.0 LE, WiFi, GPS, and NFC connectivity, allowing you to stay connected and make contactless payments with Google Pay. It is swim-proof up to 3ATM, making it suitable for shallow-water activities.\n\nThe Fossil Gen 6 runs on Wear OS 2 and is upgradable to Wear OS 3, offering improved third-party app support and enhanced health tracking features. It charges up to 80% in just 30 minutes, ensuring you\'re always ready to go.', '239.79', 0, '2023-06-08 22:13:11.115000', '2023-06-08 22:24:37.285000', '2023-06-08 22:13:12.075000', 1, 1, 'normal'),
+(28, 'Swiss Alpine Military', 'The Swiss Alpine Military Watch is a robust and stylish timepiece designed for men who appreciate precision and durability. This watch features a 43mm stainless steel case with a matted, polished surface, giving it a striking appearance. The dial is black, with illuminated indexes and hands for easy readability even in low light conditions.\n\nThe watch is powered by a quartz movement, ensuring accurate timekeeping. It comes with a chronograph function, adding to its utility. The watch is water-resistant up to 10 ATM, making it suitable for recreational swimming and snorkeling.\n\nThe Swiss Alpine Military Watch is fitted with a real leather strap, providing comfort and durability. Its design is a perfect blend of elegance and functionality, making it an ideal accessory for both casual and formal occasions.', '645.89', 0, '2023-06-08 22:07:12.708000', '2023-06-12 19:55:02.676000', '2023-06-08 22:07:13.693000', 1, 1, 'featured'),
+(29, 'Michael Kors Runway', 'The Michael Kors Slim Runway Watch is a sleek and sophisticated timepiece that embodies the brand\'s signature style. This watch features a minimalist design with a 44mm case size, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel bracelet with a brushed and polished finish, offering both comfort and durability. The round sunray dial adds to the sleek aesthetic of the watch, making it a perfect accessory for both casual and formal occasions.\n\nThe Slim Runway Watch is water-resistant up to 50m (165ft), making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nMichael Kors is a world-renowned, award-winning designer of luxury accessories and ready-to-wear with an innate sense of glamour and an unfailing eye for timeless chic. The Slim Runway Watch is a testament to this, offering luxurious style with a modern splash of trend-right touches.', '249.00', 1, '2023-06-08 22:09:59.188000', '2023-06-12 14:25:49.373000', '2023-06-08 22:10:00.171000', 1, 1, 'trending'),
+(30, 'Fossil Gen 6', 'The Fossil Gen 6 is a sophisticated smartwatch that combines style, functionality, and advanced health tracking features. This watch features a 1.28-inch AMOLED touchscreen display housed in a 44mm stainless steel casing, offering a clear and bright view for easy navigation.\n\nThe watch is powered by the Qualcomm Snapdragon Wear 4100+ chipset, ensuring smooth performance and quick app launches. It comes with 1GB of RAM and 8GB of storage, allowing you to store your favorite apps and music.\n\nThe Gen 6 includes a range of health features such as continuous heart rate monitoring, blood oxygen level measurement, automatic workout detection, and cardio fitness estimations using VO2 Max. It also supports offline Spotify playback for Spotify Premium subscribers.\n\nThe watch offers Bluetooth 5.0 LE, WiFi, GPS, and NFC connectivity, allowing you to stay connected and make contactless payments with Google Pay. It is swim-proof up to 3ATM, making it suitable for shallow-water activities.\n\nThe Fossil Gen 6 runs on Wear OS 2 and is upgradable to Wear OS 3, offering improved third-party app support and enhanced health tracking features. It charges up to 80% in just 30 minutes, ensuring you\'re always ready to go.', '239.79', 0, '2023-06-08 22:13:11.115000', '2023-06-12 20:08:07.114000', '2023-06-08 22:13:12.075000', 1, 1, 'featured'),
 (31, 'Fossil Gen 6', 'The Fossil Gen 6 is a sophisticated smartwatch that combines style, functionality, and advanced health tracking features. This watch features a 1.28-inch AMOLED touchscreen display housed in a 44mm stainless steel casing, offering a clear and bright view for easy navigation.\n\nThe watch is powered by the Qualcomm Snapdragon Wear 4100+ chipset, ensuring smooth performance and quick app launches. It comes with 1GB of RAM and 8GB of storage, allowing you to store your favorite apps and music.\n\nThe Gen 6 includes a range of health features such as continuous heart rate monitoring, blood oxygen level measurement, automatic workout detection, and cardio fitness estimations using VO2 Max. It also supports offline Spotify playback for Spotify Premium subscribers.\n\nThe watch offers Bluetooth 5.0 LE, WiFi, GPS, and NFC connectivity, allowing you to stay connected and make contactless payments with Google Pay. It is swim-proof up to 3ATM, making it suitable for shallow-water activities.\n\nThe Fossil Gen 6 runs on Wear OS 2 and is upgradable to Wear OS 3, offering improved third-party app support and enhanced health tracking features. It charges up to 80% in just 30 minutes, ensuring you\'re always ready to go.', '240.89', 0, '2023-06-08 22:15:18.676000', '2023-06-08 22:15:33.092000', '2023-06-08 22:15:19.522000', 1, 1, 'trending'),
 (32, 'U.S. Polo Assn.', 'The U.S. Polo Assn. Watch is a stylish and versatile timepiece that embodies the brand\'s classic American style. This watch features a sleek design that is suitable for both casual and formal occasions.\n\nThe watch comes with a durable strap and a round dial, offering a comfortable fit and easy readability. The dial includes hour markers and hands that add to the aesthetic appeal of the watch.\n\nThe U.S. Polo Assn. Watch is water-resistant, making it suitable for everyday use. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nU.S. Polo Assn. is the official brand of the United States Polo Association (USPA), the governing body for the sport of polo in the U.S. since 1890. The U.S. Polo Assn. brand captures the authenticity of the sport while reflecting its rich history and staying true to its roots in classic American style.', '54.99', 1, '2023-06-08 22:19:41.830000', '2023-06-08 22:19:43.064000', '2023-06-08 22:19:43.061000', 1, 1, 'trending'),
 (33, 'Disney Frozen', 'The Disney Frozen Child\'s Watch is a delightful timepiece that brings the magic of Disney\'s Frozen to your child\'s wrist. This watch features beloved characters Elsa and Anna on the dial, surrounded by a pink notched bezel. It\'s designed with an easy-to-read dial that has labeled \"HOUR\" and \"MINUTE\" hands and a minute track to help children learn to tell time.\n\nThe watch is made with high-quality materials, including a durable plastic case and a comfortable nylon strap. It\'s also water-resistant up to 30 meters, making it safe to wear in the rain or when splashed.\n\nThe Disney Frozen Child\'s Watch comes in a gift-ready box featuring the official Disney Frozen logo, making it a perfect gift for birthdays, holidays, or any special occasion. Please note that the watch is not recommended for bathing, swimming, or diving.', '18.89', 0, '2023-06-08 22:21:25.058000', '2023-06-08 22:21:26.068000', '2023-06-08 22:21:26.062000', 1, 1, 'normal'),
-(34, 'Armani Exchange', 'The Armani Exchange Watch is a sophisticated and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 44mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a silicone strap, offering both comfort and durability. The dial is brown, adding to the sleek aesthetic of the watch. It includes a three-hand date feature, ensuring you always stay on top of your schedule.\n\nThe Armani Exchange Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nArmani Exchange is a brand known for its provocative ads and street-chic lifestyle, inspired by contemporary dance music. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '167.00', 1, '2023-06-08 22:23:19.968000', '2023-06-08 22:23:20.997000', '2023-06-08 22:23:20.991000', 1, 1, 'normal'),
+(34, 'Armani Exchange', 'The Armani Exchange Watch is a sophisticated and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 44mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a silicone strap, offering both comfort and durability. The dial is brown, adding to the sleek aesthetic of the watch. It includes a three-hand date feature, ensuring you always stay on top of your schedule.\n\nThe Armani Exchange Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nArmani Exchange is a brand known for its provocative ads and street-chic lifestyle, inspired by contemporary dance music. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '167.00', 0, '2023-06-08 22:23:19.968000', '2023-06-12 19:53:50.757000', '2023-06-08 22:23:20.991000', 1, 1, 'featured'),
 (35, 'Michael Kors Lexington', 'The Michael Kors Lexington Watch is a luxurious and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 44mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a two-tone stainless steel strap, offering both comfort and durability. The dial is silver, adding to the sleek aesthetic of the watch. It includes a three-hand date feature and a chronograph, ensuring you always stay on top of your schedule.\n\nThe Lexington Watch is water-resistant up to 100m, making it suitable for bathing, swimming, or snorkeling, but not diving. It\'s powered by a Miyota JS25 Chronograph quartz movement, ensuring accurate timekeeping.\n\nMichael Kors is a world-renowned, award-winning designer of luxury accessories and ready-to-wear with an innate sense of glamour and an unfailing eye for timeless chic. The Lexington Watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '169.89', 0, '2023-06-08 22:26:09.289000', '2023-06-08 22:26:10.176000', '2023-06-08 22:26:10.172000', 1, 1, 'featured'),
 (36, 'Adidas Originals', 'The Adidas Originals EDITION THREE UNISEX Watch is a trendy and versatile timepiece that reflects the brand\'s commitment to quality and design. This watch features a 42mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel strap, offering both comfort and durability. The dial is green, adding to the sleek aesthetic of the watch. It includes luminescent hands, ensuring you always stay on top of your schedule even in low light conditions.\n\nThe EDITION THREE UNISEX Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a quartz movement, ensuring accurate timekeeping.\n\nAdidas Originals is a brand known for its sports-inspired lifestyle, celebrating originality in a globally trendsetting way. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '112.95', 0, '2023-06-08 22:30:06.485000', '2023-06-08 22:30:10.840000', '2023-06-08 22:30:10.835000', 1, 1, 'trending'),
 (37, 'Fossil Bannon', 'The Fossil Bannon Watch is a versatile and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 45mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel strap, offering both comfort and durability. The dial is green, adding to the sleek aesthetic of the watch. It includes a multifunction movement, ensuring you always stay on top of your schedule.\n\nThe Bannon Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a SR927SW battery, ensuring accurate timekeeping.\n\nFossil is a brand known for its vintage-inspired designs and high-quality materials. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '189.00', 0, '2023-06-08 22:32:11.780000', '2023-06-08 22:32:12.593000', '2023-06-08 22:32:12.590000', 1, 1, 'featured'),
 (38, 'Head Paris', 'The HEAD Paris/Moscow Watch is a versatile and high-tech smartwatch that offers a wide range of features to support your active lifestyle. This unisex watch features a 47mm metal case with a mineral lens, making it a standout piece in any watch collection.\n\nThe watch comes with a yellow silicon strap, offering both comfort and durability. The dial is digital, adding to the modern aesthetic of the watch. It includes a multi-sport mode, music and camera remote control, notifications, body temperature measurement, sleep tracker, movement and drink water reminder, alarm clock, step tracker, and heart rate, ECG, blood oxygen, and pressure monitoring.\n\nThe Paris/Moscow Watch is waterproof up to IP67, making it suitable for short periods of immersion in water, but not diving or snorkeling. It\'s compatible with Android 4.4 and higher, iOS 8 or later, ensuring you can connect it to your smartphone for enhanced features.\n\nThe watch has a battery duration of 5 days in normal use and 14 days in standby mode. It comes with the HEAD WATCHES APP, providing a comprehensive overview of your fitness level.', '119.90', 0, '2023-06-08 22:33:50.090000', '2023-06-08 22:33:52.181000', '2023-06-08 22:33:52.176000', 1, 1, 'trending'),
-(39, 'Emporio Armani ', 'The Emporio Armani Ladies AR80023 Watch is an elegant and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 32mm case diameter, making it a perfect fit for a woman\'s wrist.\n\nThe watch comes with a silver stainless steel strap, offering both comfort and durability. The dial is white, adding to the sleek aesthetic of the watch. It includes a two-hand movement, ensuring you always stay on top of your schedule.\n\nThe AR80023 Watch is water-resistant up to 3 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a SR616SW battery, ensuring accurate timekeeping.\n\nEmporio Armani is a brand known for its modern and sleek designs. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '207.00', 1, '2023-06-08 22:36:54.398000', '2023-06-08 22:36:55.262000', '2023-06-08 22:36:55.258000', 1, 1, 'trending');
+(39, 'Emporio Armani ', 'The Emporio Armani Ladies AR80023 Watch is an elegant and stylish timepiece that reflects the brand\'s commitment to quality and design. This watch features a 32mm case diameter, making it a perfect fit for a woman\'s wrist.\n\nThe watch comes with a silver stainless steel strap, offering both comfort and durability. The dial is white, adding to the sleek aesthetic of the watch. It includes a two-hand movement, ensuring you always stay on top of your schedule.\n\nThe AR80023 Watch is water-resistant up to 3 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It\'s powered by a SR616SW battery, ensuring accurate timekeeping.\n\nEmporio Armani is a brand known for its modern and sleek designs. This watch embodies the brand\'s attitude, style, performance, and quality, making it a perfect accessory for any occasion.', '207.00', 0, '2023-06-08 22:36:54.398000', '2023-06-12 20:31:32.521000', '2023-06-08 22:36:55.258000', 1, 1, 'trending'),
+(40, 'G-Shock Digital Rose', 'The G-Shock GMDB800-4 G-Squad Digital Rose is a compact, shock-resistant sports watch designed for women. It features a 200-meter water resistance, an electro-luminescent backlight, and a 1/100-second stopwatch. The watch can link with the G-SHOCK Connected phone app via Bluetooth, providing access to functions like step count tracking, custom timer combinations, and lap record memory. With a stylish pink and rose resin design, it\'s a fashionable and functional accessory for workouts and everyday wear.', '99.89', 1, '2023-06-12 19:51:43.015000', '2023-06-12 20:55:54.152000', '2023-06-12 19:51:43.913000', 1, 1, 'trending'),
+(41, 'KIDDUS', 'Kiddus watches are designed with children in mind, offering a range of vibrant and fun designs that are both educational and stylish. These watches are designed to help children learn how to tell the time, with various models including the Time Teacher, Glitter Fantasy, Sporty, and Glow in the Dark ranges. Kiddus watches are not only functional but also fashionable, making them a popular choice for children. The company is known for its high-quality products, ensuring that the watches are durable and can withstand the active lifestyle of children. Whether it\'s for everyday wear or a special occasion, Kiddus watches make a great gift for children, combining education and style in one package.', '28.55', 1, '2023-06-12 19:59:39.108000', '2023-06-12 19:59:40.191000', '2023-06-12 19:59:40.186000', 1, 1, 'normal'),
+(42, 'Marc Lauder', 'Marc Lauder is the founder of the watch company, Lauder Timepieces. The company is known for its luxury watches that are meticulously crafted with a focus on quality and design. The watches are often praised for their unique designs, precision, and durability. They are made using high-quality materials and are designed to last a lifetime. The company has a reputation for its exceptional customer service and commitment to customer satisfaction.\n\nThe Lauder Timepieces are often associated with luxury, style, and sophistication. They are considered a status symbol and are often worn by individuals who appreciate fine craftsmanship and timeless design. The watches are available in a variety of styles and designs to cater to different tastes and preferences.\n\nPlease note that this information is based on the most recent data available and may have changed. For the most accurate and up-to-date information, please visit the official website of Lauder Timepieces or contact them directly.', '79.89', 0, '2023-06-12 20:07:00.556000', '2023-06-12 20:07:01.681000', '2023-06-12 20:07:01.677000', 1, 1, 'featured'),
+(43, 'Boss', 'The Boss 1513970, also known as the Boss Energy, is a contemporary chronograph watch designed for men. It features a striking geometric and textured bezel that gives it a sporty aesthetic. The watch comes with pushers, crown protection, and a tachymeter. The sunray dial of the watch is detailed with super-luminescent indexes and includes three sub-eyes, adding dimension to the design. The Boss 1513970 is completed with a stitched silicon strap, making it comfortable for everyday wear. With a 44mm stainless steel case and water resistance up to 5ATM, this watch is both durable and practical. The Boss Energy is a perfect blend of style and functionality, making it an excellent choice for those seeking a timepiece that can keep up with an active lifestyle.', '211.00', 0, '2023-06-12 20:14:24.806000', '2023-06-12 20:14:25.620000', '2023-06-12 20:14:25.614000', 1, 1, 'featured'),
+(44, 'Samsung Watch 5', 'The Samsung Galaxy Watch5 is a sophisticated and feature-rich smartwatch that offers a comprehensive suite of health and fitness tracking capabilities. It comes with an Exynos W920 processor, 1.5GB of RAM, and 16GB of internal storage, ensuring smooth performance and ample space for apps and data. The watch also includes a 3-in-1 BioActive sensor for heart rate tracking, ECGs, and body composition analysis.\n\nOne of the new additions to the Galaxy Watch5 is an infrared temperature sensor, which is expected to improve sleep tracking accuracy and pave the way for future health features. The watch runs on Wear OS Powered by Samsung, providing a seamless and intuitive user experience.\n\nThe Galaxy Watch5 has a slim, lightweight design, and it uses sapphire crystal glass for enhanced durability. It\'s available in both 40mm and 44mm sizes, catering to a variety of wrist sizes and personal preferences. The watch also offers better accessibility features, including visibility enhancements like high-contrast fonts and color filters.', '279.99', 0, '2023-06-12 20:19:04.445000', '2023-06-12 20:32:06.830000', '2023-06-12 20:19:05.422000', 1, 1, 'featured'),
+(45, 'TSAR BOMBA', 'TSAR BOMBA is a luxury watch brand that offers a range of high-quality men\'s watches. The watches are known for their automatic mechanical movement, providing precise timekeeping and a classic appeal. The brand offers various models, including those made with carbon fiber and diamond zirconia, showcasing their commitment to using innovative materials and designs.\n\nOne of the standout models is the Carbon Fiber Kinetic Energy Display Automatic TB8212CF, which retails for $999.99 USD. This watch features a kinetic energy display, adding a unique and modern touch to the timepiece. Another popular model is the Carbon Fiber Automatic Watch TB8208CF, available in different versions including Cool Black, Elite White, and Passion Red, each retailing for $399.99 USD.\n\nTSAR BOMBA watches are not only functional but also fashionable, making them a popular choice for individuals who appreciate fine craftsmanship and timeless design. The watches are available for purchase online and come with worldwide shipping, making them accessible to customers around the globe.', '229.80', 0, '2023-06-12 20:34:27.180000', '2023-06-12 20:35:50.184000', '2023-06-12 20:34:28.066000', 1, 1, 'featured');
 
 -- --------------------------------------------------------
 
@@ -601,7 +876,14 @@ INSERT INTO `products_categories_links` (`id`, `product_id`, `category_id`, `cat
 (47, 37, 3, 0, 11),
 (48, 38, 4, 1, 8),
 (49, 38, 3, 0, 12),
-(50, 39, 4, 0, 9);
+(50, 39, 4, 0, 9),
+(51, 40, 4, 0, 10),
+(52, 41, 5, 0, 4),
+(53, 42, 4, 0, 11),
+(54, 43, 3, 0, 13),
+(55, 44, 4, 1, 12),
+(56, 44, 3, 0, 14),
+(57, 45, 3, 0, 15);
 
 -- --------------------------------------------------------
 
@@ -650,7 +932,15 @@ INSERT INTO `products_sub_categories_links` (`id`, `product_id`, `product_order`
 (48, 36, 5, 4, 0),
 (49, 37, 6, 4, 0),
 (50, 38, 3, 7, 0),
-(51, 39, 7, 6, 0);
+(51, 39, 7, 6, 0),
+(52, 40, 4, 7, 0),
+(53, 41, 3, 11, 0),
+(54, 42, 7, 4, 1),
+(55, 42, 8, 6, 0),
+(56, 43, 8, 4, 1),
+(57, 43, 9, 6, 0),
+(58, 44, 5, 8, 0),
+(59, 45, 4, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -678,7 +968,7 @@ CREATE TABLE `strapi_api_tokens` (
 --
 
 INSERT INTO `strapi_api_tokens` (`id`, `name`, `description`, `type`, `access_key`, `last_used_at`, `expires_at`, `lifespan`, `created_at`, `updated_at`, `created_by_id`, `updated_by_id`) VALUES
-(1, 'myApi', '', 'custom', '36ef19e03c2d6f360e7b5a7be68c8553f2aaa32564797bc7b7a480e99e65ed16eba1d44ccf65f544f43056647010ea6d71017a101b8e15053324ad8782c387a7', '2023-06-08 22:32:21.492000', NULL, NULL, '2023-06-03 20:50:49.451000', '2023-06-08 22:32:21.492000', NULL, NULL);
+(1, 'myApi', '', 'custom', '36ef19e03c2d6f360e7b5a7be68c8553f2aaa32564797bc7b7a480e99e65ed16eba1d44ccf65f544f43056647010ea6d71017a101b8e15053324ad8782c387a7', '2023-06-12 21:00:41.304000', NULL, NULL, '2023-06-03 20:50:49.451000', '2023-06-12 21:00:41.304000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -823,7 +1113,7 @@ INSERT INTO `strapi_core_store_settings` (`id`, `key`, `value`, `type`, `environ
 (14, 'plugin_content_manager_configuration_content_types::plugin::users-permissions.permission', '{\"uid\":\"plugin::users-permissions.permission\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"action\",\"defaultSortBy\":\"action\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"id\",\"searchable\":true,\"sortable\":true}},\"action\":{\"edit\":{\"label\":\"action\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"action\",\"searchable\":true,\"sortable\":true}},\"role\":{\"edit\":{\"label\":\"role\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"name\"},\"list\":{\"label\":\"role\",\"searchable\":true,\"sortable\":true}},\"createdAt\":{\"edit\":{\"label\":\"createdAt\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"createdAt\",\"searchable\":true,\"sortable\":true}},\"updatedAt\":{\"edit\":{\"label\":\"updatedAt\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"updatedAt\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"action\",\"role\",\"createdAt\"],\"edit\":[[{\"name\":\"action\",\"size\":6},{\"name\":\"role\",\"size\":6}]]}}', 'object', NULL, NULL),
 (15, 'plugin_upload_settings', '{\"sizeOptimization\":true,\"responsiveDimensions\":false,\"autoOrientation\":false}', 'object', NULL, NULL),
 (16, 'plugin_upload_view_configuration', '{\"pageSize\":10,\"sort\":\"createdAt:DESC\"}', 'object', NULL, NULL),
-(17, 'plugin_upload_metrics', '{\"weeklySchedule\":\"9 52 20 * * 6\",\"lastWeeklyUpdate\":1685818329036}', 'object', NULL, NULL),
+(17, 'plugin_upload_metrics', '{\"weeklySchedule\":\"29 52 16 * * 0\",\"lastWeeklyUpdate\":1686495149070}', 'object', NULL, NULL),
 (18, 'plugin_users-permissions_grant', '{\"email\":{\"enabled\":true,\"icon\":\"envelope\"},\"discord\":{\"enabled\":false,\"icon\":\"discord\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/discord/callback\",\"scope\":[\"identify\",\"email\"]},\"facebook\":{\"enabled\":false,\"icon\":\"facebook-square\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/facebook/callback\",\"scope\":[\"email\"]},\"google\":{\"enabled\":false,\"icon\":\"google\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/google/callback\",\"scope\":[\"email\"]},\"github\":{\"enabled\":false,\"icon\":\"github\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/github/callback\",\"scope\":[\"user\",\"user:email\"]},\"microsoft\":{\"enabled\":false,\"icon\":\"windows\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/microsoft/callback\",\"scope\":[\"user.read\"]},\"twitter\":{\"enabled\":false,\"icon\":\"twitter\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/twitter/callback\"},\"instagram\":{\"enabled\":false,\"icon\":\"instagram\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/instagram/callback\",\"scope\":[\"user_profile\"]},\"vk\":{\"enabled\":false,\"icon\":\"vk\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/vk/callback\",\"scope\":[\"email\"]},\"twitch\":{\"enabled\":false,\"icon\":\"twitch\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/twitch/callback\",\"scope\":[\"user:read:email\"]},\"linkedin\":{\"enabled\":false,\"icon\":\"linkedin\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/linkedin/callback\",\"scope\":[\"r_liteprofile\",\"r_emailaddress\"]},\"cognito\":{\"enabled\":false,\"icon\":\"aws\",\"key\":\"\",\"secret\":\"\",\"subdomain\":\"my.subdomain.com\",\"callback\":\"api/auth/cognito/callback\",\"scope\":[\"email\",\"openid\",\"profile\"]},\"reddit\":{\"enabled\":false,\"icon\":\"reddit\",\"key\":\"\",\"secret\":\"\",\"state\":true,\"callback\":\"api/auth/reddit/callback\",\"scope\":[\"identity\"]},\"auth0\":{\"enabled\":false,\"icon\":\"\",\"key\":\"\",\"secret\":\"\",\"subdomain\":\"my-tenant.eu\",\"callback\":\"api/auth/auth0/callback\",\"scope\":[\"openid\",\"email\",\"profile\"]},\"cas\":{\"enabled\":false,\"icon\":\"book\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/cas/callback\",\"scope\":[\"openid email\"],\"subdomain\":\"my.subdomain.com/cas\"},\"patreon\":{\"enabled\":false,\"icon\":\"\",\"key\":\"\",\"secret\":\"\",\"callback\":\"api/auth/patreon/callback\",\"scope\":[\"identity\",\"identity[email]\"]}}', 'object', NULL, NULL),
 (19, 'plugin_users-permissions_email', '{\"reset_password\":{\"display\":\"Email.template.reset_password\",\"icon\":\"sync\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Reset password\",\"message\":\"<p>We heard that you lost your password. Sorry about that!</p>\\n\\n<p>But don’t worry! You can use the following link to reset your password:</p>\\n<p><%= URL %>?code=<%= TOKEN %></p>\\n\\n<p>Thanks.</p>\"}},\"email_confirmation\":{\"display\":\"Email.template.email_confirmation\",\"icon\":\"check-square\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Account confirmation\",\"message\":\"<p>Thank you for registering!</p>\\n\\n<p>You have to confirm your email address. Please click on the link below.</p>\\n\\n<p><%= URL %>?confirmation=<%= CODE %></p>\\n\\n<p>Thanks.</p>\"}}}', 'object', NULL, NULL),
 (20, 'plugin_users-permissions_advanced', '{\"unique_email\":true,\"allow_register\":true,\"email_confirmation\":false,\"email_reset_password\":null,\"email_confirmation_redirection\":\"\",\"default_role\":\"authenticated\"}', 'object', NULL, NULL),
@@ -952,8 +1242,8 @@ INSERT INTO `sub_categories` (`id`, `title`, `created_at`, `updated_at`, `publis
 (3, 'Luxury', '2023-06-05 11:04:25.365000', '2023-06-05 11:04:28.432000', '2023-06-05 11:04:28.427000', 1, 1),
 (4, 'Casual', '2023-06-05 11:04:53.778000', '2023-06-05 11:04:54.748000', '2023-06-05 11:04:54.744000', 1, 1),
 (6, 'Fashion', '2023-06-05 11:06:39.220000', '2023-06-07 21:55:03.625000', '2023-06-05 11:06:39.973000', 1, 1),
-(7, 'Sport', '2023-06-05 11:07:21.511000', '2023-06-07 21:56:11.355000', '2023-06-05 11:07:22.316000', 1, 1),
-(8, 'Smartwatches', '2023-06-07 16:42:14.344000', '2023-06-07 21:53:47.115000', '2023-06-07 16:42:15.838000', 1, 1),
+(7, 'Sport', '2023-06-05 11:07:21.511000', '2023-06-12 19:58:04.515000', '2023-06-05 11:07:22.316000', 1, 1),
+(8, 'Smartwatches', '2023-06-07 16:42:14.344000', '2023-06-12 20:10:11.325000', '2023-06-07 16:42:15.838000', 1, 1),
 (9, 'Wear OS by Google', '2023-06-07 16:45:42.121000', '2023-06-07 16:46:24.831000', '2023-06-07 16:45:43.262000', 1, 1),
 (10, 'Apple Watch', '2023-06-07 16:46:46.971000', '2023-06-07 16:46:48.727000', '2023-06-07 16:46:48.722000', 1, 1),
 (11, 'Popular Characters', '2023-06-07 21:56:02.997000', '2023-06-07 21:57:17.369000', '2023-06-07 21:56:04.060000', 1, 1);
@@ -982,17 +1272,15 @@ INSERT INTO `sub_categories_categories_links` (`id`, `sub_category_id`, `categor
 (5, 4, 4, 1, 2),
 (6, 4, 3, 0, 2),
 (9, 6, 4, 1, 4),
-(10, 7, 4, 2, 5),
-(11, 7, 3, 1, 4),
+(10, 7, 4, 2, 1),
+(11, 7, 3, 1, 1),
 (12, 6, 3, 2, 5),
-(13, 8, 4, 2, 6),
-(14, 8, 3, 1, 6),
-(15, 8, 5, 0, 1),
+(13, 8, 4, 2, 1),
+(14, 8, 3, 1, 1),
 (16, 9, 6, 0, 1),
 (17, 10, 6, 0, 2),
-(18, 6, 5, 3, 2),
-(19, 11, 5, 0, 3),
-(20, 7, 5, 3, 4);
+(18, 6, 5, 1, 1),
+(19, 11, 5, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1573,7 +1861,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `files_folder_links`
@@ -1585,7 +1873,7 @@ ALTER TABLE `files_folder_links`
 -- AUTO_INCREMENT for table `files_related_morphs`
 --
 ALTER TABLE `files_related_morphs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
 
 --
 -- AUTO_INCREMENT for table `i18n_locale`
@@ -1597,19 +1885,19 @@ ALTER TABLE `i18n_locale`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `products_categories_links`
 --
 ALTER TABLE `products_categories_links`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `products_sub_categories_links`
 --
 ALTER TABLE `products_sub_categories_links`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `strapi_api_tokens`

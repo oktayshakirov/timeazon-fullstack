@@ -1,5 +1,5 @@
 .cover {
-  width: 260px;
+  width: 240px;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 10px;
@@ -8,9 +8,8 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.cover .image {
-  width: 100%;
-  height: 300px;
+.image {
+  height: 280px;
   overflow: hidden;
   position: relative;
 }
@@ -68,38 +67,22 @@ h2 {
   text-decoration: line-through;
 }
 
-@media (max-width: 45em) {
-  /* Target screens up to 720px */
+@media (max-width: 615px) {
   .cover {
-    width: 100%;
-    margin: 0 auto;
+    width: 180px;
   }
 
-  .cover .image {
-    height: 200px;
+  .image {
+    height: 180px;
   }
 }
 
-@media (max-width: 37.5em) {
-  /* Target screens up to 600px */
+@media (max-width: 450px) {
   .cover {
-    width: 100%;
-    margin: 0 auto;
+    width: 160px;
   }
 
-  .cover .image {
-    height: 200px;
-  }
-}
-
-@media (max-width: 25em) {
-  /* Target screens up to 400px */
-  .cover {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .cover .image {
-    height: 200px;
+  h2 {
+    font-size: 13px;
   }
 }

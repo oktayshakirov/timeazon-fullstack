@@ -51,3 +51,15 @@
     }
   }
 }
+
+@media (max-width: 730px) {
+  .slider {
+    height: calc(40vh - 0px);
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    height: calc(30vh - 0px);
+  }
+}

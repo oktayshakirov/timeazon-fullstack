@@ -17,7 +17,9 @@
         cursor: pointer;
         margin-bottom: 10px;
         background: rgb(236, 236, 236);
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       }
     }
     .mainImg {
@@ -28,7 +30,9 @@
         max-height: 800px;
         object-fit: cover;
         background: rgb(236, 236, 236);
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       }
     }
   }
@@ -58,7 +62,6 @@
       font-size: 28px;
       font-weight: 400;
 
-
       button {
         width: 50px;
         height: 50px;
@@ -78,12 +81,14 @@
     }
 
     button:hover {
-      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+        2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     }
 
     button:focus {
       outline: none;
-      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+        2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     }
 
     .add {
@@ -101,12 +106,14 @@
     }
 
     .add:hover {
-      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+        2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     }
 
     .add:focus {
       outline: none;
-      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+        2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     }
 
     .links {
@@ -117,19 +124,19 @@
         padding: 7px 20px 7px 20px;
         border-radius: 10px;
         box-shadow: inset 4px 4px 10px #bcbcbc63, inset -4px -4px 10px #ffffff49;
-        background-color: #3387e7;
+        background-color: #06beb5;
         color: white;
         font-size: 13px;
         border: none;
         display: flex;
         align-items: center;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         letter-spacing: 2px;
         cursor: pointer;
       }
       .item:hover {
         background-color: #0e0e0e;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         box-shadow: inset 4px 4px 10px #bcbcbc63, inset -4px -4px 10px #ffffff49;
       }
     }
@@ -155,12 +162,10 @@
 }
 
 @media screen and (max-width: 1200px) {
-
   .product {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-  
-}}
-
+  }
+}

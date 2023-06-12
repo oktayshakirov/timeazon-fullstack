@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.scss";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { makeRequest } from "../../makeRequest";
+import CloseIcon from "@mui/icons-material/Close";
+import { useSelector, useDispatch } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const [isCartVisible, setIsCartVisible] = useState(true);
 
   const totalPrice = () => {
     let total = 0;
@@ -18,8 +18,14 @@ const Cart = () => {
     return total.toFixed(2);
   };
 
+  if (!isCartVisible) return null;
+
   return (
     <div className="cart">
+      <CloseIcon
+        className="close-cart"
+        onClick={() => setIsCartVisible(false)}
+      />{" "}
       <h1>Watches in your cart</h1>
       {products?.map((item) => (
         <div className="item" key={item.id}>
@@ -43,7 +49,7 @@ const Cart = () => {
       </div>
       <button>PAY NOW</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
-        Reset Cart
+        Reset
       </span>
     </div>
   );
