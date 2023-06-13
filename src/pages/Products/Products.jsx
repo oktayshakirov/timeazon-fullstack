@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../../components/List/List";
 import useFetch from "../../hooks/useFetch";
@@ -10,6 +9,7 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
+  const [filterVisible, setFilterVisible] = useState(false);
 
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${catId}`
@@ -26,9 +26,16 @@ const Products = () => {
     );
   };
 
+  const toggleFilterVisible = () => {
+    setFilterVisible(!filterVisible);
+  };
+
   return (
     <div className="products">
-      <div className="left">
+      <button className="filter-button" onClick={toggleFilterVisible}>
+        Show Filters
+      </button>
+      <div className={`left ${filterVisible ? "show" : ""}`}>
         <div className="filterItem">
           <h2>Product Categories:</h2>
           {data?.map((item) => (
