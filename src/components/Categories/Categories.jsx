@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   const [loading, setLoading] = useState(true);
 
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
   useEffect(() => {
+    // Simulating a delay for demonstration purposes
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -21,7 +26,7 @@ const Categories = () => {
       ) : (
         <>
           <div className="box">
-            <img src="/Categories/men.jpg" alt="Men" />
+            <img src="/Categories/men.jpg" alt="Men" onLoad={handleImageLoad} />
             <button>
               <Link className="link" to="/products/3">
                 Men
@@ -29,7 +34,11 @@ const Categories = () => {
             </button>
           </div>
           <div className="box">
-            <img src="/Categories/women.jpg" alt="Women" />
+            <img
+              src="/Categories/women.jpg"
+              alt="Women"
+              onLoad={handleImageLoad}
+            />
             <button>
               <Link className="link" to="/products/4">
                 Women
@@ -37,7 +46,11 @@ const Categories = () => {
             </button>
           </div>
           <div className="box">
-            <img src="/Categories/kids.jpg" alt="Kids" />
+            <img
+              src="/Categories/kids.jpg"
+              alt="Kids"
+              onLoad={handleImageLoad}
+            />
             <button>
               <Link className="link" to="/products/5">
                 Kids
@@ -45,7 +58,11 @@ const Categories = () => {
             </button>
           </div>
           <div className="box">
-            <img src="/Categories/smart.jpg" alt="Smart" />
+            <img
+              src="/Categories/smart.jpg"
+              alt="Smart"
+              onLoad={handleImageLoad}
+            />
             <button>
               <Link className="link" to="/products/6">
                 Smart
