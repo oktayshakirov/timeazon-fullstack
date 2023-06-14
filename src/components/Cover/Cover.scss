@@ -79,10 +79,17 @@ h2 {
 
 @media (max-width: 450px) {
   .cover {
-    width: 160px;
+    width: 120px;
   }
 
+  .image {
+    height: 150px;
+  }
   h2 {
-    font-size: 13px;
+    font-size: 10px;
+  }
+
+  .cover .prices h3 {
+    font-size: 12px;
   }
 }
