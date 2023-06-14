@@ -1,6 +1,16 @@
-# E-Commerce Online Store with React.js & Strapi
+# Dynamic E-commerce Platform with React.js and Strapi
 
-This project is a complete e-commerce application built with React and Strapi.
+This project is an e-commerce platform developed using React.js for the front end and Strapi for the back end. The data is managed using a MySQL database, and design elements have been implemented using Sass, giving the interface a visually pleasing and functional aesthetic which is also responsive to all screen sizes.
+
+The primary feature of the application is the product page, which provides an extensive display of product information - including descriptions, images, and pricing. Products are further organized into categories and subcategories for better user navigation.
+
+An attention-grabbing feature is the automatic slider that updates every seven seconds. Coupled with a navigational bar and dedicated tabs for featured and trending posts.
+
+The platform also includes dynamic pricing functions. Discounts can be set on products, or badges can be added to denote new items.
+
+One essential feature is the shopping cart system, allowing users to manage their product selections conveniently. The integration of Strapi, a headless CMS, supports efficient content management on the platform, permitting the addition, editing, or deletion of items, categories, subcategories and variable tags.
+
+
 
 ![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
 
