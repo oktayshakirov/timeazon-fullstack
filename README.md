@@ -2,7 +2,7 @@
 
 This project is a complete e-commerce application built with React and Strapi.
 
-![Desktop Demo](./assets/images/projects/watch_store.png "Desktop Demo")
+![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
 
 ## Installation
 
