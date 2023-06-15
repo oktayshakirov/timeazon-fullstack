@@ -10,9 +10,9 @@ The platform also includes dynamic pricing functions. Discounts can be set on pr
 
 One essential feature is the shopping cart system, allowing users to manage their product selections conveniently. The integration of Strapi, a headless CMS, supports efficient content management on the platform, permitting the addition, editing, or deletion of items, categories, subcategories and variable tags.
 
-
-
 ![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
+
+Demo is available [here](https://timeazon.netlify.app/)
 
 ## Installation
 
@@ -99,6 +99,8 @@ yarn start
 ```
 
 Now, you should be able to access the application at http://localhost:3000.
+
+![Desktop Demo](.\demo_admin.png "Desktop Demo")
 
 ### Deployment
 
