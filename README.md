@@ -100,7 +100,7 @@ yarn start
 
 Now, you should be able to access the application at http://localhost:3000.
 
-![Desktop Demo](.\demo_admin.png "Desktop Demo")
+![Desktop Demo](https://raw.githubusercontent.com/oktayshakirov/online-store/main/public/demo_admin.png "Desktop Demo")
 
 ### Deployment
 
