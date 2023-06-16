@@ -17,6 +17,11 @@ const Product = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
+  const MyComponent = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);}
+
   return (
     <div className="product">
       {loading ? (

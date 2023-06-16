@@ -163,9 +163,12 @@
 
 @media screen and (max-width: 1200px) {
   .product {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    .left .images img
+    {height: 80px;}
   }
 }

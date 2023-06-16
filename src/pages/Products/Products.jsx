@@ -30,6 +30,11 @@ const Products = () => {
     setFilterVisible(!filterVisible);
   };
 
+  const MyComponent = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);}
+
   return (
     <div className="products">
       <button className="filter-button" onClick={toggleFilterVisible}>
