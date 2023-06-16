@@ -1,0 +1,137 @@
+.products {
+  padding: 30px 30px;
+  display: flex;
+
+  .filter-button {
+    width: 100%;
+    display: none;
+    background-color: #06beb5b6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .left {
+    flex: 1;
+    position: sticky;
+    height: 100%;
+    top: 50px;
+
+    @media screen and (max-width: 850px) {
+      display: none;
+      flex-direction: column;
+    }
+
+    &.show {
+      display: flex !important;
+    }
+
+    .filterItem {
+      margin-bottom: 30px;
+
+      h2 {
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .inputItem {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        label {
+          color: #0b0b0b;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          appearance: none;
+          width: 18px;
+          height: 18px;
+          border: 2px solid #ccc;
+          border-radius: 50%;
+          outline: none;
+          margin-bottom: 10px;
+
+          &:checked {
+            background-color: #06beb5b6;
+          }
+        }
+
+        input[type="range"] {
+          flex: 0.5;
+          appearance: none;
+          height: 4px;
+          border-radius: 2px;
+          background-color: #ccc;
+          outline: none;
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #06beb5b6;
+            cursor: pointer;
+          }
+
+          &::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border: none;
+            border-radius: 50%;
+            background-color: #555;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+
+    .catImg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 30px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .filter-button {
+      display: block;
+    }
+
+    .left {
+      order: 2;
+      position: static;
+      height: auto;
+      top: auto;
+    }
+
+    .right {
+      order: 3;
+
+      .catImg {
+        height: 200px;
+      }
+    }
+  }
+}

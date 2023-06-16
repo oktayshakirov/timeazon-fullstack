@@ -1,57 +1,123 @@
-# 🚀 Getting started with Strapi
+# Dynamic E-commerce Platform with React.js and Strapi
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+This project is an e-commerce platform developed using React.js for the front end and Strapi for the back end. The data is managed using a MySQL database, and design elements have been implemented using Sass, giving the interface a visually pleasing and functional aesthetic which is also responsive to all screen sizes.
 
-### `develop`
+The primary feature of the application is the product page, which provides an extensive display of product information - including descriptions, images, and pricing. Products are further organized into categories and subcategories for better user navigation.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+An attention-grabbing feature is the automatic slider that updates every seven seconds. Coupled with a navigational bar and dedicated tabs for featured and trending posts.
 
+The platform also includes dynamic pricing functions. Discounts can be set on products, or badges can be added to denote new items.
+
+One essential feature is the shopping cart system, allowing users to manage their product selections conveniently. The integration of Strapi, a headless CMS, supports efficient content management on the platform, permitting the addition, editing, or deletion of items, categories, subcategories and variable tags.
+
+![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
+
+Demo is available [here](https://timeazon.netlify.app/)
+
+## Installation
+
+Before you start, ensure you have Node.js and npm or yarn installed on your system. If not, you can download Node.js and npm from [here](https://nodejs.org/) and yarn from [here](https://yarnpkg.com/).
+
+### Step 1: Clone the Repository
+
+Start by cloning the repository to your local machine. You can do this by running the following command in your terminal:
+
+```bash
+git clone https://github.com/oktayshakirov/online-store.git
 ```
-npm run develop
-# or
-yarn develop
+
+### Step 2: Navigate to the Directory
+
+Navigate into the cloned repository's directory:
+
+```bash
+cd online-store
 ```
 
-### `start`
+### Step 3: Install Dependencies for React App
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+Install the necessary dependencies for the React app:
 
+```bash
+npm install
 ```
-npm run start
-# or
+
+or
+
+```bash
+yarn install
+```
+
+### Step 3: Navigate to the API Directory
+
+Navigate to the Strapi app, which is in the /api directory within the project:
+
+```bash
+cd api
+```
+
+### Step 5: Install Dependencies for Strapi App
+
+Install the necessary dependencies for the Strapi app:
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+### Step 6: Setup Strapi
+
+Follow the instructions in the Strapi documentation to set up your Strapi CMS. You will need to create an .env file in the root of your Strapi directory (/api) and add your database connection string and other environment-specific variables.
+
+To start the React app, navigate to its directory and run:
+
+```bash
+npm start
+```
+
+or
+
+```bash
 yarn start
 ```
 
-### `build`
+To start the Strapi app, navigate to its directory (/api) and run:
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
+```bash
+npm start
 ```
 
-## ⚙️ Deployment
+or
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+```bash
+yarn start
+```
 
-## 📚 Learn more
+Now, you should be able to access the application at http://localhost:3000.
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+![Desktop Demo](https://raw.githubusercontent.com/oktayshakirov/online-store/main/public/demo_admin.png "Desktop Demo")
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+### Deployment
 
-## ✨ Community
+The deployment process may vary depending on your hosting provider. Please refer to the specific documentation provided by your hosting service for the deployment process.
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+### Contributing
 
----
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## License
+
+### MIT
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+- Translation: Ofcourse you can use this for you project! Just make sure to say where you got this from :)
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
