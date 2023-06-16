@@ -3,6 +3,7 @@
   display: flex;
 
   .filter-button {
+    width: 100%;
     display: none;
     background-color: #06beb5b6;
     color: white;
@@ -101,9 +102,9 @@
       width: 100%;
       height: 300px;
       object-fit: cover;
-      margin-bottom: 30px;
-      margin-left: 15px;
       border-radius: 30px;
+      margin: auto;
+      margin-bottom: 40px;
     }
   }
 }
@@ -129,7 +130,7 @@
       order: 3;
 
       .catImg {
-        height: 150px;
+        height: 200px;
       }
     }
   }

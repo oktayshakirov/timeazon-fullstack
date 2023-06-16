@@ -5,6 +5,7 @@ import "./Slider.scss";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const data = [
     "/Banners/Slider1.jpg",
@@ -28,13 +29,18 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="slider">
+      {isLoading && <div className="loader"></div>}
       <div
         className="container"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
         {data.map((src, index) => (
-          <img key={index} src={src} alt="" />
+          <img key={index} src={src} alt="" onLoad={handleImageLoad} />
         ))}
       </div>
       <div className="icons">
