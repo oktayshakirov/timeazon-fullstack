@@ -25,50 +25,31 @@ const Categories = () => {
         <div className="loader"></div>
       ) : (
         <>
-          <div className="box">
-            <img src="/Categories/men.jpg" alt="Men" onLoad={handleImageLoad} />
-            <button>
-              <Link className="link" to="/products/3">
-                Men
-              </Link>
-            </button>
-          </div>
-          <div className="box">
-            <img
-              src="/Categories/women.jpg"
-              alt="Women"
-              onLoad={handleImageLoad}
-            />
-            <button>
-              <Link className="link" to="/products/4">
-                Women
-              </Link>
-            </button>
-          </div>
-          <div className="box">
-            <img
-              src="/Categories/kids.jpg"
-              alt="Kids"
-              onLoad={handleImageLoad}
-            />
-            <button>
-              <Link className="link" to="/products/5">
-                Kids
-              </Link>
-            </button>
-          </div>
-          <div className="box">
-            <img
-              src="/Categories/smart.jpg"
-              alt="Smart"
-              onLoad={handleImageLoad}
-            />
-            <button>
-              <Link className="link" to="/products/6">
-                Smart
-              </Link>
-            </button>
-          </div>
+         <div className="box">
+  <Link to="/products/3">
+    <img src="/Categories/men.jpg" alt="Men" onLoad={handleImageLoad} />
+    <button>Men</button>
+  </Link>
+</div>
+<div className="box">
+  <Link to="/products/4">
+    <img src="/Categories/women.jpg" alt="Women" onLoad={handleImageLoad} />
+    <button>Women</button>
+  </Link>
+</div>
+<div className="box">
+  <Link to="/products/5">
+    <img src="/Categories/kids.jpg" alt="Kids" onLoad={handleImageLoad} />
+    <button>Kids</button>
+  </Link>
+</div>
+<div className="box">
+  <Link to="/products/6">
+    <img src="/Categories/smart.jpg" alt="Smart" onLoad={handleImageLoad} />
+    <button>Smart</button>
+  </Link>
+</div>
+
         </>
       )}
     </div>

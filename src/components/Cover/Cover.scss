@@ -1,5 +1,5 @@
 .cover {
-  width: 240px;
+  width: 260px;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 10px;
@@ -9,7 +9,7 @@
 }
 
 .image {
-  height: 280px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -77,7 +77,7 @@ h2 {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 490px) {
   .cover {
     width: 120px;
   }

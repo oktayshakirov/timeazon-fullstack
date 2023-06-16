@@ -14,19 +14,23 @@ const Featured = ({ type }) => {
   return (
     <div className="featured">
       <div className="top">
-        <div className="description">
-          <h1>&#128293; {type} products</h1>
-          <h4>
-            <MonetizationOnOutlinedIcon className="icons" /> Up to 30% Off
-          </h4>
-          <h4>
-            <LocalShippingOutlinedIcon className="icons" /> Free Delivery
-          </h4>
-          <h4>
-            <WatchOffOutlinedIcon className="icons" /> 30-day returning policy
-          </h4>
-          <img src="/Images/superdeals.png" />
-        </div>
+      <div className="tab">
+  <div className="first-row">
+    <h1 className="type">&#128293; {type} watches</h1>
+    <div className="second-row">
+      <h4>
+        <MonetizationOnOutlinedIcon className="icons" /> Up to 30% Off
+      </h4>
+      <h4>
+        <LocalShippingOutlinedIcon className="icons" /> Free Delivery
+      </h4>
+      <h4>
+        <WatchOffOutlinedIcon className="icons" /> 30-Day Return
+      </h4>
+    </div>
+    <img src="/Images/superdeals.png" className="deals"/>
+  </div>
+</div>
       </div>
       <div className="bottom">
         {error ? (
