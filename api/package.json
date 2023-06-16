@@ -5,12 +5,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "npm",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "vite build",
+    "build": "npm build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "npm preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
