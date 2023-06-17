@@ -1,5 +1,5 @@
 {
-  "homepage": "http://oktayshakirov.github.io/online-store",
+  "homepage": "https://timeazon.netlify.app/",
   "name": "vite",
   "private": true,
   "version": "0.0.0",
@@ -27,7 +27,7 @@
     "react-router-dom": "^6.11.2",
     "redux-persist": "^6.0.0",
     "sass": "^1.62.1",
-    "vite": "^4.3.2" 
+    "vite": "^4.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
