@@ -32,28 +32,28 @@ const Navbar = () => {
               <KeyboardArrowDownIcon />
             </div>
             <div className="dropdown-content">
-              <Link className="link" to="/language/1">
+              <Link className="link" to="/">
                 German
               </Link>
-              <Link className="link" to="/language/2">
+              <Link className="link" to="/">
                 French
               </Link>
-              <Link className="link" to="/language/3">
+              <Link className="link" to="/">
                 English
               </Link>
-              <Link className="link" to="/language/4">
+              <Link className="link" to="/">
                 Chinese
               </Link>
-              <Link className="link" to="/language/5">
+              <Link className="link" to="/">
                 Japanese
               </Link>
-              <Link className="link" to="/language/6">
+              <Link className="link" to="/">
                 Portuguese
               </Link>
-              <Link className="link" to="/language/7">
+              <Link className="link" to="/">
                 Italian
               </Link>
-              <Link className="link" to="/language/8">
+              <Link className="link" to="/">
                 Spanish
               </Link>
             </div>
@@ -64,19 +64,19 @@ const Navbar = () => {
               <KeyboardArrowDownIcon />
             </div>
             <div className="dropdown-content">
-              <Link className="link" to="/currency/1">
+              <Link className="link" to="/">
                 Euro
               </Link>
-              <Link className="link" to="/currency/2">
+              <Link className="link" to="/">
                 US Dollar
               </Link>
-              <Link className="link" to="/currency/3">
+              <Link className="link" to="/">
                 British Pound
               </Link>
-              <Link className="link" to="/currency/4">
+              <Link className="link" to="/">
                 Japanese Yen
               </Link>
-              <Link className="link" to="/currency/5">
+              <Link className="link" to="/">
                 Chinese Yuan
               </Link>
             </div>
