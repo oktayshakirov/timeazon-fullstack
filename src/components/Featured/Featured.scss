@@ -131,6 +131,17 @@
   }
 }
 
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 10px;
+}
+
 @media (max-width: 1170px) {
   .featured {
     .first-row {

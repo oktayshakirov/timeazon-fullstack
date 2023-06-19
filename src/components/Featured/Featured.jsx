@@ -37,7 +37,10 @@ const Featured = ({ type }) => {
       </div>
       <div className="bottom">
         {error ? (
-          "The watches couldn't be loaded from the database ! Please try again later!"
+          <div className="error-message">
+            Oops! Our database where we keep all our watches seems to be down.
+            Please try again later ! &#128542;
+          </div>
         ) : loading ? (
           <div className="loader"></div>
         ) : (
