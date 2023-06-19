@@ -43,9 +43,9 @@
       text-transform: uppercase;
       font-size: 1.6em;
       color: #333333;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       margin-left: 10px;
-      font-family: "Comfortaa", cursive, "Space Grotesk", sans-serif; 
+      font-family: "Comfortaa", cursive, "Space Grotesk", sans-serif;
       margin-right: 20px;
     }
 
@@ -57,7 +57,7 @@
       -webkit-text-stroke: 1px rgba(0, 0, 0, 0.174);
       margin: 5px;
       margin-top: 5px;
-      font-family: "Comfortaa", cursive, "Space Grotesk", sans-serif; 
+      font-family: "Comfortaa", cursive, "Space Grotesk", sans-serif;
     }
   }
 
@@ -68,22 +68,27 @@
     gap: 50px;
   }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 1.6em; 
-  color: rgba(0, 0, 0, 0.855);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  margin-right: 15px;
-  animation: pulse 2s infinite;
-}
-
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.855);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 15px;
+    animation: pulse 2s infinite;
+  }
 
   img {
     width: 10%;
@@ -129,7 +134,7 @@
 @media (max-width: 1170px) {
   .featured {
     .first-row {
-      flex-direction: column; 
+      flex-direction: column;
       align-items: center;
     }
 
@@ -140,27 +145,24 @@
 }
 
 @media (max-width: 920px) {
-
-
   .featured {
     .top {
       h1 {
         font-size: 1.4em;
-    }
+      }
 
-    h4 {
-      font-size: 1em;
+      h4 {
+        font-size: 1em;
+      }
+      .second-row {
+        gap: 40px;
+      }
     }
-    .second-row {
-      gap: 40px;
-    }
-  }
     img {
       width: 15%;
-
     }
     .icons {
-      font-size: 1.6em; 
+      font-size: 1.6em;
       margin-right: 5px;
     }
     .bottom {
@@ -170,24 +172,22 @@
 }
 
 @media (max-width: 650px) {
-
   .featured {
     .top {
       h1 {
         font-size: 1.3em;
-    }
+      }
 
-    h4 {
-      font-size: 0.7em;
+      h4 {
+        font-size: 0.7em;
+      }
     }
-  }
     img {
       width: 20%;
-
     }
 
     .icons {
-      font-size: 1.2em; 
+      font-size: 1.2em;
       margin-right: 3px;
     }
   }
@@ -198,24 +198,21 @@
     .top {
       h1 {
         font-size: 1em;
-    }
+      }
 
-    .second-row {
-      gap: 5px;
-    }
+      .second-row {
+        gap: 5px;
+      }
 
-    h4 {
-      font-size: 0.6em;
+      h4 {
+        font-size: 0.6em;
+      }
     }
-  }
     img {
       width: 25%;
-
     }
     .bottom {
       gap: 15px;
     }
   }
 }
-
-
