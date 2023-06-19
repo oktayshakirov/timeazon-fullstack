@@ -1,15 +1,15 @@
 const path = require("path");
 
 module.exports = ({ env }) => {
-  const client = env("DATABASE_CLIENT", "postgres");
+  const client = env("DATABASE_CLIENT", "mysql");
 
   const connections = {
-    postgres: {
+    mysql: {
       connection: {
         host: env("DATABASE_HOST", "localhost"),
-        port: env.int("DATABASE_PORT", 5432),
+        port: env.int("DATABASE_PORT", 3306),
         database: env("DATABASE_NAME", "strapi"),
-        username: env("DATABASE_USERNAME", "strapi"),
+        user: env("DATABASE_USERNAME", "strapi"),
         password: env("DATABASE_PASSWORD", "strapi"),
         ssl: env.bool("DATABASE_SSL", false),
       },
@@ -17,21 +17,14 @@ module.exports = ({ env }) => {
         min: env.int("DATABASE_POOL_MIN", 2),
         max: env.int("DATABASE_POOL_MAX", 10),
       },
-      schema: env("DATABASE_SCHEMA", "public"),
     },
   };
 
   return {
-    defaultConnection: "default",
-    connections: {
-      default: {
-        connector: "bookshelf",
-        settings: {
-          client,
-          ...connections[client],
-        },
-        options: {},
-      },
+    connection: {
+      client,
+      ...connections[client],
+      acquireConnectionTimeout: env.int("DATABASE_CONNECTION_TIMEOUT", 60000),
     },
   };
 };
