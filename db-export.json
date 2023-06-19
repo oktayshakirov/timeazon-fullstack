@@ -1,0 +1,1572 @@
+{
+	"version": 2,
+	"data": {
+		"api::sub-category.sub-category": {
+			"3": {
+				"id": 3,
+				"title": "Luxury",
+				"createdAt": "2023-06-05T09:04:25.365Z",
+				"updatedAt": "2023-06-05T09:04:28.432Z",
+				"publishedAt": "2023-06-05T09:04:28.427Z",
+				"products": [
+					21,
+					28,
+					35,
+					45
+				],
+				"categories": [
+					3,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"4": {
+				"id": 4,
+				"title": "Casual",
+				"createdAt": "2023-06-05T09:04:53.778Z",
+				"updatedAt": "2023-06-05T09:04:54.748Z",
+				"publishedAt": "2023-06-05T09:04:54.744Z",
+				"products": [
+					23,
+					28,
+					29,
+					34,
+					36,
+					37,
+					42,
+					43
+				],
+				"categories": [
+					3,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"6": {
+				"id": 6,
+				"title": "Fashion",
+				"createdAt": "2023-06-05T09:06:39.220Z",
+				"updatedAt": "2023-06-07T19:55:03.625Z",
+				"publishedAt": "2023-06-05T09:06:39.973Z",
+				"products": [
+					25,
+					27,
+					29,
+					32,
+					34,
+					35,
+					39,
+					42,
+					43
+				],
+				"categories": [
+					4,
+					5,
+					3
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"7": {
+				"id": 7,
+				"title": "Sport",
+				"createdAt": "2023-06-05T09:07:21.511Z",
+				"updatedAt": "2023-06-12T17:58:04.515Z",
+				"publishedAt": "2023-06-05T09:07:22.316Z",
+				"products": [
+					22,
+					36,
+					38,
+					40
+				],
+				"categories": [
+					3,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"8": {
+				"id": 8,
+				"title": "Smartwatches",
+				"createdAt": "2023-06-07T14:42:14.344Z",
+				"updatedAt": "2023-06-12T18:10:11.325Z",
+				"publishedAt": "2023-06-07T14:42:15.838Z",
+				"products": [
+					20,
+					26,
+					30,
+					31,
+					44
+				],
+				"categories": [
+					3,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"9": {
+				"id": 9,
+				"title": "Wear OS by Google",
+				"createdAt": "2023-06-07T14:45:42.121Z",
+				"updatedAt": "2023-06-07T14:46:24.831Z",
+				"publishedAt": "2023-06-07T14:45:43.262Z",
+				"products": [
+					30,
+					31
+				],
+				"categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"10": {
+				"id": 10,
+				"title": "Apple Watch",
+				"createdAt": "2023-06-07T14:46:46.971Z",
+				"updatedAt": "2023-06-07T14:46:48.727Z",
+				"publishedAt": "2023-06-07T14:46:48.722Z",
+				"products": [
+					20,
+					26
+				],
+				"categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"11": {
+				"id": 11,
+				"title": "Popular Characters",
+				"createdAt": "2023-06-07T19:56:02.997Z",
+				"updatedAt": "2023-06-07T19:57:17.369Z",
+				"publishedAt": "2023-06-07T19:56:04.060Z",
+				"products": [
+					24,
+					33,
+					41
+				],
+				"categories": [
+					5
+				],
+				"createdBy": null,
+				"updatedBy": null
+			}
+		},
+		"api::product.product": {
+			"20": {
+				"id": 20,
+				"title": "Apple Watch SE Gold",
+				"desc": "The Apple Watch SE Gold is a versatile smartwatch that combines style and functionality. It features a gold aluminum finish that adds a touch of elegance to your wrist. The watch is equipped with a Retina LTPO OLED display, offering a bright and clear view of your data and apps.\n\nThe Apple Watch SE Gold is powered by the S5 SiP with a 64-bit dual-core processor, ensuring smooth performance and quick response times. It comes with a capacity of 32GB, providing ample space for your apps and data.\n\nThe watch includes a range of health and fitness features, such as a second-generation optical heart sensor, an always-on altimeter, and emergency SOS. It's also water-resistant up to 50 meters, making it suitable for shallow-water activities like swimming in a pool or ocean.\n\nThe Apple Watch SE Gold supports both GPS and cellular connectivity, allowing you to stay connected even without your iPhone nearby. It also supports Apple Pay and GymKit, offering convenience for your workouts and payments.\n\nThe watch comes with a built-in rechargeable lithium-ion battery that offers up to 18 hours of use, ensuring it can keep up with your busy lifestyle. It charges via a USB-C magnetic charging cable.",
+				"price": 299.99,
+				"isNew": false,
+				"createdAt": "2023-06-08T19:37:42.688Z",
+				"updatedAt": "2023-06-08T19:41:35.859Z",
+				"publishedAt": "2023-06-08T19:37:43.703Z",
+				"type": "trending",
+				"img": 80,
+				"img2": 48,
+				"categories": [
+					4,
+					6
+				],
+				"sub_categories": [
+					10,
+					8
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"21": {
+				"id": 21,
+				"title": "Versace Versus",
+				"desc": "The Versace Versus Black watch from the Domus Collection is a stylish and bold timepiece that embodies the spirit of Versace's Versus line. This watch features a large 44mm case diameter with an artistic watch face and prominent Versus Versace logo representation, making it a standout piece in any watch collection.\n\nThe watch comes with an adjustable black silicone strap, offering comfort and durability. The black dial and gunmetal details add to the sleek and modern aesthetic of the watch, making it a perfect accessory for both casual and formal occasions.\n\nThe Versace Versus Black watch is water-resistant up to 50 meters, making it capable of withstanding light splashes and brief immersion in water, though it is not suitable for swimming, diving, or prolonged water exposure.\n\nThe Domus Collection was created to match your watches with your everyday fashion, and the Versus Versace Black watch is no exception. It's packed in a solid branded giftable box, making it an ideal gift for watch enthusiasts.",
+				"price": 214,
+				"isNew": false,
+				"createdAt": "2023-06-08T19:44:58.872Z",
+				"updatedAt": "2023-06-08T19:44:59.749Z",
+				"publishedAt": "2023-06-08T19:44:59.745Z",
+				"type": "featured",
+				"img": 42,
+				"img2": 43,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					3
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"22": {
+				"id": 22,
+				"title": "Adidas Digital Two ",
+				"desc": "The Adidas Digital Two watch is a modern and stylish timepiece that combines functionality with the iconic Adidas aesthetic. This watch features a digital dial with a light-up feature, ensuring visibility even in low-light conditions.\n\nThe watch is housed in a 36mm brushed gold-tone stainless steel case, adding a touch of elegance to the sporty design. The bracelet is also made of brushed gold-tone stainless steel, providing durability and a cohesive look. The Adidas logo is prominently displayed on the back case and buckle, showcasing the brand's identity.\n\nThe Digital Two watch comes with a range of functions, including hours, minutes, seconds, date, alarm, stopwatch, and countdown timer, making it a versatile accessory for everyday wear.\n\nThe watch is water-resistant up to 50 meters, making it suitable for light water activities but not for diving or snorkeling.",
+				"price": 77.89,
+				"isNew": false,
+				"createdAt": "2023-06-08T19:48:04.434Z",
+				"updatedAt": "2023-06-08T19:56:48.024Z",
+				"publishedAt": "2023-06-08T19:48:05.389Z",
+				"type": "normal",
+				"img": 40,
+				"img2": 41,
+				"categories": [
+					3,
+					4
+				],
+				"sub_categories": [
+					7
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"23": {
+				"id": 23,
+				"title": "Tommy Hilfiger",
+				"desc": "The Tommy Hilfiger Analog Gray Dial Women's Watch-TH1782263W is an elegant and timeless piece that embodies the brand's classic American cool style. This watch features a sophisticated gray dial housed in a durable stainless steel case. The silver stainless steel band adds a touch of class and ensures a comfortable fit. Powered by quartz movement, this watch offers precise timekeeping. With a water resistance depth of 30 meters, it can withstand splashes or brief immersion in water. This watch is a perfect blend of style and functionality, making it a great accessory for any occasion.",
+				"price": 107.89,
+				"isNew": true,
+				"createdAt": "2023-06-08T19:52:24.217Z",
+				"updatedAt": "2023-06-08T19:52:25.184Z",
+				"publishedAt": "2023-06-08T19:52:25.179Z",
+				"type": "trending",
+				"img": 78,
+				"img2": 79,
+				"categories": [
+					4
+				],
+				"sub_categories": [
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"24": {
+				"id": 24,
+				"title": "Disney Mickey Mouse",
+				"desc": "The Disney Mickey Mouse Watch for Kids is a fun and educational accessory that your child will love. This watch features a vibrant design with Mickey Mouse characters that will delight any Disney fan.\n\nThe watch comes with a variety of kid-friendly features. It includes a selfie camera for taking pictures, a photo album viewer, a video player, a voice recorder, a calculator, an alarm clock, a pedometer step counter, various playable games, and changeable watch faces.\n\nDesigned with a red and black color scheme, this watch has a 40mm screen size and a square shape that's easy for kids to read. It's also compatible with smartphones, making it a versatile accessory for your child.\n\nThe watch is powered by a long-lasting rechargeable battery, eliminating the need for frequent battery replacements. It comes with a USB charging cable for your convenience.",
+				"price": 14.99,
+				"isNew": false,
+				"createdAt": "2023-06-08T19:55:49.279Z",
+				"updatedAt": "2023-06-08T19:56:13.766Z",
+				"publishedAt": "2023-06-08T19:55:50.980Z",
+				"type": "normal",
+				"img": 74,
+				"img2": 71,
+				"categories": [
+					5
+				],
+				"sub_categories": [
+					11
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"25": {
+				"id": 25,
+				"title": "Michael Kors Liliane",
+				"desc": "The Michael Kors LILIANE SET is a luxurious and elegant accessory set that includes a watch and a bracelet. The watch features a three-hand movement housed in a 36mm rose gold-tone stainless steel case. The dial is a beautiful shade of pink, adding a touch of femininity to the piece.\n\nThe watch strap, made of stainless steel, is also in a rose gold tone, matching the case and creating a cohesive and stylish look. The strap is 16mm wide and closes with a bracelet deployant closure, ensuring a secure fit.\n\nThe set also includes a matching rose gold-tone stainless steel bracelet with a slider closure. This bracelet adds an extra touch of sophistication to the set, making it a perfect gift for someone special or a treat for yourself.\n\nThe watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling.",
+				"price": 174.95,
+				"isNew": false,
+				"createdAt": "2023-06-08T19:59:15.064Z",
+				"updatedAt": "2023-06-12T17:55:56.269Z",
+				"publishedAt": "2023-06-08T19:59:16.345Z",
+				"type": "trending",
+				"img": 70,
+				"img2": 68,
+				"categories": [
+					4
+				],
+				"sub_categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"26": {
+				"id": 26,
+				"title": "Apple Watch Series 7",
+				"desc": "The Apple Watch Series 7 is a cutting-edge smartwatch that combines style, functionality, and health-focused features. This watch features a larger Always-On Retina LTPO OLED display, offering a clear and bright view even under sunlight. It is powered by the S7 with a 64-bit dual-core processor, ensuring smooth performance and quick app launches.\n\nThe watch supports LTE and UMTS, Wi-Fi, and Bluetooth connectivity, allowing you to stay connected even without your iPhone nearby. It includes a range of health features such as a blood oxygen sensor, an electrical heart sensor (ECG app), and a third-generation optical heart sensor.\n\nWith a storage capacity of 32GB, you can store your favorite apps, music, podcasts, and more. The watch offers up to 18 hours of battery life and comes with a USB-C magnetic fast charging cable. It is water-resistant up to 50 meters, making it suitable for shallow-water activities like swimming.\n\nDesigned with environmental considerations, the watch is made with 100% recycled aluminum in the case and 100% recycled tungsten in the Taptic Engine. The Apple Watch Series 7 is a perfect blend of style, functionality, and health-focused features, making it a great accessory for any lifestyle.",
+				"price": 425.79,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:01:16.690Z",
+				"updatedAt": "2023-06-12T18:14:55.227Z",
+				"publishedAt": "2023-06-08T20:01:54.661Z",
+				"type": "normal",
+				"img": 60,
+				"img2": 61,
+				"categories": [
+					3,
+					4,
+					6
+				],
+				"sub_categories": [
+					10,
+					8
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"27": {
+				"id": 27,
+				"title": "Lacoste",
+				"desc": "The Lacoste Kids Watch is a vibrant and playful timepiece designed for children. This watch features a blue dial and a blue silicone strap, making it a fun and colorful accessory for your child.\n\nThe watch has a plastic case with a diameter of 32mm, making it a suitable size for children's wrists. The dial includes Arabic numerals, making it easy for kids to read the time.\n\nThe Lacoste Kids Watch is water-resistant up to 5 ATM, meaning it can withstand splashes or brief immersion in water, but it is not suitable for swimming or bathing.\n\nThe watch is powered by a quartz movement, ensuring accurate timekeeping. The silicone strap is durable and comfortable for everyday wear, and it comes with a buckle clasp for secure fastening.",
+				"price": 69.95,
+				"isNew": true,
+				"createdAt": "2023-06-08T20:04:01.015Z",
+				"updatedAt": "2023-06-08T20:04:01.876Z",
+				"publishedAt": "2023-06-08T20:04:01.873Z",
+				"type": "normal",
+				"img": 64,
+				"img2": 66,
+				"categories": [
+					5
+				],
+				"sub_categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"28": {
+				"id": 28,
+				"title": "Swiss Alpine Military",
+				"desc": "The Swiss Alpine Military Watch is a robust and stylish timepiece designed for men who appreciate precision and durability. This watch features a 43mm stainless steel case with a matted, polished surface, giving it a striking appearance. The dial is black, with illuminated indexes and hands for easy readability even in low light conditions.\n\nThe watch is powered by a quartz movement, ensuring accurate timekeeping. It comes with a chronograph function, adding to its utility. The watch is water-resistant up to 10 ATM, making it suitable for recreational swimming and snorkeling.\n\nThe Swiss Alpine Military Watch is fitted with a real leather strap, providing comfort and durability. Its design is a perfect blend of elegance and functionality, making it an ideal accessory for both casual and formal occasions.",
+				"price": 645.89,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:07:12.708Z",
+				"updatedAt": "2023-06-12T17:55:02.676Z",
+				"publishedAt": "2023-06-08T20:07:13.693Z",
+				"type": "featured",
+				"img": 76,
+				"img2": 77,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					4,
+					3
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"29": {
+				"id": 29,
+				"title": "Michael Kors Runway",
+				"desc": "The Michael Kors Slim Runway Watch is a sleek and sophisticated timepiece that embodies the brand's signature style. This watch features a minimalist design with a 44mm case size, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel bracelet with a brushed and polished finish, offering both comfort and durability. The round sunray dial adds to the sleek aesthetic of the watch, making it a perfect accessory for both casual and formal occasions.\n\nThe Slim Runway Watch is water-resistant up to 50m (165ft), making it suitable for short periods of recreational swimming, but not diving or snorkeling. It's powered by a quartz movement, ensuring accurate timekeeping.\n\nMichael Kors is a world-renowned, award-winning designer of luxury accessories and ready-to-wear with an innate sense of glamour and an unfailing eye for timeless chic. The Slim Runway Watch is a testament to this, offering luxurious style with a modern splash of trend-right touches.",
+				"price": 249,
+				"isNew": true,
+				"createdAt": "2023-06-08T20:09:59.188Z",
+				"updatedAt": "2023-06-12T12:25:49.373Z",
+				"publishedAt": "2023-06-08T20:10:00.171Z",
+				"type": "trending",
+				"img": 69,
+				"img2": 73,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					6,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"30": {
+				"id": 30,
+				"title": "Fossil Gen 6",
+				"desc": "The Fossil Gen 6 is a sophisticated smartwatch that combines style, functionality, and advanced health tracking features. This watch features a 1.28-inch AMOLED touchscreen display housed in a 44mm stainless steel casing, offering a clear and bright view for easy navigation.\n\nThe watch is powered by the Qualcomm Snapdragon Wear 4100+ chipset, ensuring smooth performance and quick app launches. It comes with 1GB of RAM and 8GB of storage, allowing you to store your favorite apps and music.\n\nThe Gen 6 includes a range of health features such as continuous heart rate monitoring, blood oxygen level measurement, automatic workout detection, and cardio fitness estimations using VO2 Max. It also supports offline Spotify playback for Spotify Premium subscribers.\n\nThe watch offers Bluetooth 5.0 LE, WiFi, GPS, and NFC connectivity, allowing you to stay connected and make contactless payments with Google Pay. It is swim-proof up to 3ATM, making it suitable for shallow-water activities.\n\nThe Fossil Gen 6 runs on Wear OS 2 and is upgradable to Wear OS 3, offering improved third-party app support and enhanced health tracking features. It charges up to 80% in just 30 minutes, ensuring you're always ready to go.",
+				"price": 239.79,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:13:11.115Z",
+				"updatedAt": "2023-06-12T18:08:07.114Z",
+				"publishedAt": "2023-06-08T20:13:12.075Z",
+				"type": "featured",
+				"img": 56,
+				"img2": 57,
+				"categories": [
+					3,
+					6
+				],
+				"sub_categories": [
+					8,
+					9
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"31": {
+				"id": 31,
+				"title": "Fossil Gen 6",
+				"desc": "The Fossil Gen 6 is a sophisticated smartwatch that combines style, functionality, and advanced health tracking features. This watch features a 1.28-inch AMOLED touchscreen display housed in a 44mm stainless steel casing, offering a clear and bright view for easy navigation.\n\nThe watch is powered by the Qualcomm Snapdragon Wear 4100+ chipset, ensuring smooth performance and quick app launches. It comes with 1GB of RAM and 8GB of storage, allowing you to store your favorite apps and music.\n\nThe Gen 6 includes a range of health features such as continuous heart rate monitoring, blood oxygen level measurement, automatic workout detection, and cardio fitness estimations using VO2 Max. It also supports offline Spotify playback for Spotify Premium subscribers.\n\nThe watch offers Bluetooth 5.0 LE, WiFi, GPS, and NFC connectivity, allowing you to stay connected and make contactless payments with Google Pay. It is swim-proof up to 3ATM, making it suitable for shallow-water activities.\n\nThe Fossil Gen 6 runs on Wear OS 2 and is upgradable to Wear OS 3, offering improved third-party app support and enhanced health tracking features. It charges up to 80% in just 30 minutes, ensuring you're always ready to go.",
+				"price": 240.89,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:15:18.676Z",
+				"updatedAt": "2023-06-08T20:15:33.092Z",
+				"publishedAt": "2023-06-08T20:15:19.522Z",
+				"type": "trending",
+				"img": 58,
+				"img2": 59,
+				"categories": [
+					4,
+					6
+				],
+				"sub_categories": [
+					8,
+					9
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"32": {
+				"id": 32,
+				"title": "U.S. Polo Assn.",
+				"desc": "The U.S. Polo Assn. Watch is a stylish and versatile timepiece that embodies the brand's classic American style. This watch features a sleek design that is suitable for both casual and formal occasions.\n\nThe watch comes with a durable strap and a round dial, offering a comfortable fit and easy readability. The dial includes hour markers and hands that add to the aesthetic appeal of the watch.\n\nThe U.S. Polo Assn. Watch is water-resistant, making it suitable for everyday use. It's powered by a quartz movement, ensuring accurate timekeeping.\n\nU.S. Polo Assn. is the official brand of the United States Polo Association (USPA), the governing body for the sport of polo in the U.S. since 1890. The U.S. Polo Assn. brand captures the authenticity of the sport while reflecting its rich history and staying true to its roots in classic American style.",
+				"price": 54.99,
+				"isNew": true,
+				"createdAt": "2023-06-08T20:19:41.830Z",
+				"updatedAt": "2023-06-08T20:19:43.064Z",
+				"publishedAt": "2023-06-08T20:19:43.061Z",
+				"type": "trending",
+				"img": 75,
+				"img2": 72,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"33": {
+				"id": 33,
+				"title": "Disney Frozen",
+				"desc": "The Disney Frozen Child's Watch is a delightful timepiece that brings the magic of Disney's Frozen to your child's wrist. This watch features beloved characters Elsa and Anna on the dial, surrounded by a pink notched bezel. It's designed with an easy-to-read dial that has labeled \"HOUR\" and \"MINUTE\" hands and a minute track to help children learn to tell time.\n\nThe watch is made with high-quality materials, including a durable plastic case and a comfortable nylon strap. It's also water-resistant up to 30 meters, making it safe to wear in the rain or when splashed.\n\nThe Disney Frozen Child's Watch comes in a gift-ready box featuring the official Disney Frozen logo, making it a perfect gift for birthdays, holidays, or any special occasion. Please note that the watch is not recommended for bathing, swimming, or diving.",
+				"price": 18.89,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:21:25.058Z",
+				"updatedAt": "2023-06-08T20:21:26.068Z",
+				"publishedAt": "2023-06-08T20:21:26.062Z",
+				"type": "normal",
+				"img": 53,
+				"img2": 52,
+				"categories": [
+					5
+				],
+				"sub_categories": [
+					11
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"34": {
+				"id": 34,
+				"title": "Armani Exchange",
+				"desc": "The Armani Exchange Watch is a sophisticated and stylish timepiece that reflects the brand's commitment to quality and design. This watch features a 44mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a silicone strap, offering both comfort and durability. The dial is brown, adding to the sleek aesthetic of the watch. It includes a three-hand date feature, ensuring you always stay on top of your schedule.\n\nThe Armani Exchange Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It's powered by a quartz movement, ensuring accurate timekeeping.\n\nArmani Exchange is a brand known for its provocative ads and street-chic lifestyle, inspired by contemporary dance music. This watch embodies the brand's attitude, style, performance, and quality, making it a perfect accessory for any occasion.",
+				"price": 167,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:23:19.968Z",
+				"updatedAt": "2023-06-12T17:53:50.757Z",
+				"publishedAt": "2023-06-08T20:23:20.991Z",
+				"type": "featured",
+				"img": 47,
+				"img2": 49,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					4,
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"35": {
+				"id": 35,
+				"title": "Michael Kors Lexington",
+				"desc": "The Michael Kors Lexington Watch is a luxurious and stylish timepiece that reflects the brand's commitment to quality and design. This watch features a 44mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a two-tone stainless steel strap, offering both comfort and durability. The dial is silver, adding to the sleek aesthetic of the watch. It includes a three-hand date feature and a chronograph, ensuring you always stay on top of your schedule.\n\nThe Lexington Watch is water-resistant up to 100m, making it suitable for bathing, swimming, or snorkeling, but not diving. It's powered by a Miyota JS25 Chronograph quartz movement, ensuring accurate timekeeping.\n\nMichael Kors is a world-renowned, award-winning designer of luxury accessories and ready-to-wear with an innate sense of glamour and an unfailing eye for timeless chic. The Lexington Watch embodies the brand's attitude, style, performance, and quality, making it a perfect accessory for any occasion.",
+				"price": 169.89,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:26:09.289Z",
+				"updatedAt": "2023-06-08T20:26:10.176Z",
+				"publishedAt": "2023-06-08T20:26:10.172Z",
+				"type": "featured",
+				"img": 65,
+				"img2": 67,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					3,
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"36": {
+				"id": 36,
+				"title": "Adidas Originals",
+				"desc": "The Adidas Originals EDITION THREE UNISEX Watch is a trendy and versatile timepiece that reflects the brand's commitment to quality and design. This watch features a 42mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel strap, offering both comfort and durability. The dial is green, adding to the sleek aesthetic of the watch. It includes luminescent hands, ensuring you always stay on top of your schedule even in low light conditions.\n\nThe EDITION THREE UNISEX Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It's powered by a quartz movement, ensuring accurate timekeeping.\n\nAdidas Originals is a brand known for its sports-inspired lifestyle, celebrating originality in a globally trendsetting way. This watch embodies the brand's attitude, style, performance, and quality, making it a perfect accessory for any occasion.",
+				"price": 112.95,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:30:06.485Z",
+				"updatedAt": "2023-06-08T20:30:10.840Z",
+				"publishedAt": "2023-06-08T20:30:10.835Z",
+				"type": "trending",
+				"img": 45,
+				"img2": 44,
+				"categories": [
+					3,
+					4
+				],
+				"sub_categories": [
+					4,
+					7
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"37": {
+				"id": 37,
+				"title": "Fossil Bannon",
+				"desc": "The Fossil Bannon Watch is a versatile and stylish timepiece that reflects the brand's commitment to quality and design. This watch features a 45mm case diameter, making it a standout piece in any watch collection.\n\nThe watch comes with a stainless steel strap, offering both comfort and durability. The dial is green, adding to the sleek aesthetic of the watch. It includes a multifunction movement, ensuring you always stay on top of your schedule.\n\nThe Bannon Watch is water-resistant up to 5 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It's powered by a SR927SW battery, ensuring accurate timekeeping.\n\nFossil is a brand known for its vintage-inspired designs and high-quality materials. This watch embodies the brand's attitude, style, performance, and quality, making it a perfect accessory for any occasion.",
+				"price": 189,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:32:11.780Z",
+				"updatedAt": "2023-06-08T20:32:12.593Z",
+				"publishedAt": "2023-06-08T20:32:12.590Z",
+				"type": "featured",
+				"img": 54,
+				"img2": 55,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"38": {
+				"id": 38,
+				"title": "Head Paris",
+				"desc": "The HEAD Paris/Moscow Watch is a versatile and high-tech smartwatch that offers a wide range of features to support your active lifestyle. This unisex watch features a 47mm metal case with a mineral lens, making it a standout piece in any watch collection.\n\nThe watch comes with a yellow silicon strap, offering both comfort and durability. The dial is digital, adding to the modern aesthetic of the watch. It includes a multi-sport mode, music and camera remote control, notifications, body temperature measurement, sleep tracker, movement and drink water reminder, alarm clock, step tracker, and heart rate, ECG, blood oxygen, and pressure monitoring.\n\nThe Paris/Moscow Watch is waterproof up to IP67, making it suitable for short periods of immersion in water, but not diving or snorkeling. It's compatible with Android 4.4 and higher, iOS 8 or later, ensuring you can connect it to your smartphone for enhanced features.\n\nThe watch has a battery duration of 5 days in normal use and 14 days in standby mode. It comes with the HEAD WATCHES APP, providing a comprehensive overview of your fitness level.",
+				"price": 119.9,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:33:50.090Z",
+				"updatedAt": "2023-06-08T20:33:52.181Z",
+				"publishedAt": "2023-06-08T20:33:52.176Z",
+				"type": "trending",
+				"img": 63,
+				"img2": 62,
+				"categories": [
+					3,
+					4
+				],
+				"sub_categories": [
+					7
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"39": {
+				"id": 39,
+				"title": "Emporio Armani ",
+				"desc": "The Emporio Armani Ladies AR80023 Watch is an elegant and stylish timepiece that reflects the brand's commitment to quality and design. This watch features a 32mm case diameter, making it a perfect fit for a woman's wrist.\n\nThe watch comes with a silver stainless steel strap, offering both comfort and durability. The dial is white, adding to the sleek aesthetic of the watch. It includes a two-hand movement, ensuring you always stay on top of your schedule.\n\nThe AR80023 Watch is water-resistant up to 3 ATM, making it suitable for short periods of recreational swimming, but not diving or snorkeling. It's powered by a SR616SW battery, ensuring accurate timekeeping.\n\nEmporio Armani is a brand known for its modern and sleek designs. This watch embodies the brand's attitude, style, performance, and quality, making it a perfect accessory for any occasion.",
+				"price": 207,
+				"isNew": false,
+				"createdAt": "2023-06-08T20:36:54.398Z",
+				"updatedAt": "2023-06-12T18:31:32.521Z",
+				"publishedAt": "2023-06-08T20:36:55.258Z",
+				"type": "trending",
+				"img": 50,
+				"img2": 51,
+				"categories": [
+					4
+				],
+				"sub_categories": [
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"40": {
+				"id": 40,
+				"title": "G-Shock Digital Rose",
+				"desc": "The G-Shock GMDB800-4 G-Squad Digital Rose is a compact, shock-resistant sports watch designed for women. It features a 200-meter water resistance, an electro-luminescent backlight, and a 1/100-second stopwatch. The watch can link with the G-SHOCK Connected phone app via Bluetooth, providing access to functions like step count tracking, custom timer combinations, and lap record memory. With a stylish pink and rose resin design, it's a fashionable and functional accessory for workouts and everyday wear.",
+				"price": 99.89,
+				"isNew": true,
+				"createdAt": "2023-06-12T17:51:43.015Z",
+				"updatedAt": "2023-06-12T18:55:54.152Z",
+				"publishedAt": "2023-06-12T17:51:43.913Z",
+				"type": "trending",
+				"img": 83,
+				"img2": 82,
+				"categories": [
+					4
+				],
+				"sub_categories": [
+					7
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"41": {
+				"id": 41,
+				"title": "KIDDUS",
+				"desc": "Kiddus watches are designed with children in mind, offering a range of vibrant and fun designs that are both educational and stylish. These watches are designed to help children learn how to tell the time, with various models including the Time Teacher, Glitter Fantasy, Sporty, and Glow in the Dark ranges. Kiddus watches are not only functional but also fashionable, making them a popular choice for children. The company is known for its high-quality products, ensuring that the watches are durable and can withstand the active lifestyle of children. Whether it's for everyday wear or a special occasion, Kiddus watches make a great gift for children, combining education and style in one package.",
+				"price": 28.55,
+				"isNew": true,
+				"createdAt": "2023-06-12T17:59:39.108Z",
+				"updatedAt": "2023-06-12T17:59:40.191Z",
+				"publishedAt": "2023-06-12T17:59:40.186Z",
+				"type": "normal",
+				"img": 85,
+				"img2": 84,
+				"categories": [
+					5
+				],
+				"sub_categories": [
+					11
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"42": {
+				"id": 42,
+				"title": "Marc Lauder",
+				"desc": "Marc Lauder is the founder of the watch company, Lauder Timepieces. The company is known for its luxury watches that are meticulously crafted with a focus on quality and design. The watches are often praised for their unique designs, precision, and durability. They are made using high-quality materials and are designed to last a lifetime. The company has a reputation for its exceptional customer service and commitment to customer satisfaction.\n\nThe Lauder Timepieces are often associated with luxury, style, and sophistication. They are considered a status symbol and are often worn by individuals who appreciate fine craftsmanship and timeless design. The watches are available in a variety of styles and designs to cater to different tastes and preferences.\n\nPlease note that this information is based on the most recent data available and may have changed. For the most accurate and up-to-date information, please visit the official website of Lauder Timepieces or contact them directly.",
+				"price": 79.89,
+				"isNew": false,
+				"createdAt": "2023-06-12T18:07:00.556Z",
+				"updatedAt": "2023-06-12T18:07:01.681Z",
+				"publishedAt": "2023-06-12T18:07:01.677Z",
+				"type": "featured",
+				"img": 86,
+				"img2": 87,
+				"categories": [
+					4
+				],
+				"sub_categories": [
+					6,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"43": {
+				"id": 43,
+				"title": "Boss",
+				"desc": "The Boss 1513970, also known as the Boss Energy, is a contemporary chronograph watch designed for men. It features a striking geometric and textured bezel that gives it a sporty aesthetic. The watch comes with pushers, crown protection, and a tachymeter. The sunray dial of the watch is detailed with super-luminescent indexes and includes three sub-eyes, adding dimension to the design. The Boss 1513970 is completed with a stitched silicon strap, making it comfortable for everyday wear. With a 44mm stainless steel case and water resistance up to 5ATM, this watch is both durable and practical. The Boss Energy is a perfect blend of style and functionality, making it an excellent choice for those seeking a timepiece that can keep up with an active lifestyle.",
+				"price": 211,
+				"isNew": false,
+				"createdAt": "2023-06-12T18:14:24.806Z",
+				"updatedAt": "2023-06-12T18:14:25.620Z",
+				"publishedAt": "2023-06-12T18:14:25.614Z",
+				"type": "featured",
+				"img": 89,
+				"img2": 88,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					6,
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"44": {
+				"id": 44,
+				"title": "Samsung Watch 5",
+				"desc": "The Samsung Galaxy Watch5 is a sophisticated and feature-rich smartwatch that offers a comprehensive suite of health and fitness tracking capabilities. It comes with an Exynos W920 processor, 1.5GB of RAM, and 16GB of internal storage, ensuring smooth performance and ample space for apps and data. The watch also includes a 3-in-1 BioActive sensor for heart rate tracking, ECGs, and body composition analysis.\n\nOne of the new additions to the Galaxy Watch5 is an infrared temperature sensor, which is expected to improve sleep tracking accuracy and pave the way for future health features. The watch runs on Wear OS Powered by Samsung, providing a seamless and intuitive user experience.\n\nThe Galaxy Watch5 has a slim, lightweight design, and it uses sapphire crystal glass for enhanced durability. It's available in both 40mm and 44mm sizes, catering to a variety of wrist sizes and personal preferences. The watch also offers better accessibility features, including visibility enhancements like high-contrast fonts and color filters.",
+				"price": 279.99,
+				"isNew": false,
+				"createdAt": "2023-06-12T18:19:04.445Z",
+				"updatedAt": "2023-06-12T18:32:06.830Z",
+				"publishedAt": "2023-06-12T18:19:05.422Z",
+				"type": "featured",
+				"img": 99,
+				"img2": 98,
+				"categories": [
+					3,
+					4
+				],
+				"sub_categories": [
+					8
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"45": {
+				"id": 45,
+				"title": "TSAR BOMBA",
+				"desc": "TSAR BOMBA is a luxury watch brand that offers a range of high-quality men's watches. The watches are known for their automatic mechanical movement, providing precise timekeeping and a classic appeal. The brand offers various models, including those made with carbon fiber and diamond zirconia, showcasing their commitment to using innovative materials and designs.\n\nOne of the standout models is the Carbon Fiber Kinetic Energy Display Automatic TB8212CF, which retails for $999.99 USD. This watch features a kinetic energy display, adding a unique and modern touch to the timepiece. Another popular model is the Carbon Fiber Automatic Watch TB8208CF, available in different versions including Cool Black, Elite White, and Passion Red, each retailing for $399.99 USD.\n\nTSAR BOMBA watches are not only functional but also fashionable, making them a popular choice for individuals who appreciate fine craftsmanship and timeless design. The watches are available for purchase online and come with worldwide shipping, making them accessible to customers around the globe.",
+				"price": 229.8,
+				"isNew": false,
+				"createdAt": "2023-06-12T18:34:27.180Z",
+				"updatedAt": "2023-06-12T18:35:50.184Z",
+				"publishedAt": "2023-06-12T18:34:28.066Z",
+				"type": "featured",
+				"img": 102,
+				"img2": 100,
+				"categories": [
+					3
+				],
+				"sub_categories": [
+					3
+				],
+				"createdBy": null,
+				"updatedBy": null
+			}
+		},
+		"plugin::upload.file": {
+			"40": {
+				"id": 40,
+				"name": "adidas_sport.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "adidas_sport_904b040fc3",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/adidas_sport_904b040fc3.jpg",
+				"createdAt": "2023-06-08T19:31:40.078Z",
+				"updatedAt": "2023-06-08T19:31:40.078Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"41": {
+				"id": 41,
+				"name": "adidas_sport2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "adidas_sport2_41ddf92038",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/adidas_sport2_41ddf92038.jpg",
+				"createdAt": "2023-06-08T19:31:40.083Z",
+				"updatedAt": "2023-06-08T19:31:40.083Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"42": {
+				"id": 42,
+				"name": "versace_versus_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "versace_versus_men_f57a0a4ed2",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/versace_versus_men_f57a0a4ed2.jpg",
+				"createdAt": "2023-06-08T19:31:40.083Z",
+				"updatedAt": "2023-06-09T12:39:26.558Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"43": {
+				"id": 43,
+				"name": "versace_versus_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "versace_versus_men2_f8ec4f1e4f",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/versace_versus_men2_f8ec4f1e4f.jpg",
+				"createdAt": "2023-06-08T19:31:40.116Z",
+				"updatedAt": "2023-06-08T19:31:40.116Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"44": {
+				"id": 44,
+				"name": "adidas_women.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "adidas_women_376fe264aa",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/adidas_women_376fe264aa.png",
+				"createdAt": "2023-06-08T19:31:40.307Z",
+				"updatedAt": "2023-06-08T19:31:40.307Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"45": {
+				"id": 45,
+				"name": "adidas_women2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "adidas_women2_5d17de74ce",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/adidas_women2_5d17de74ce.png",
+				"createdAt": "2023-06-08T19:31:40.412Z",
+				"updatedAt": "2023-06-08T19:31:40.412Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"47": {
+				"id": 47,
+				"name": "armani_exchange_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "armani_exchange_men_43f1070fa0",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/armani_exchange_men_43f1070fa0.jpg",
+				"createdAt": "2023-06-08T19:31:40.581Z",
+				"updatedAt": "2023-06-08T19:31:40.581Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"48": {
+				"id": 48,
+				"name": "apple_watch_women_se.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "apple_watch_women_se_6b4d0ca743",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/apple_watch_women_se_6b4d0ca743.png",
+				"createdAt": "2023-06-08T19:31:40.575Z",
+				"updatedAt": "2023-06-08T19:31:40.575Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"49": {
+				"id": 49,
+				"name": "armani_exchange_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "armani_exchange_men2_9d81606f36",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/armani_exchange_men2_9d81606f36.jpg",
+				"createdAt": "2023-06-08T19:31:40.699Z",
+				"updatedAt": "2023-06-08T19:31:40.699Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"50": {
+				"id": 50,
+				"name": "armani_women.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "armani_women_a8200279c7",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/armani_women_a8200279c7.jpg",
+				"createdAt": "2023-06-08T19:31:40.711Z",
+				"updatedAt": "2023-06-08T19:31:40.711Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"51": {
+				"id": 51,
+				"name": "armani_women2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "armani_women2_d1135f0917",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/armani_women2_d1135f0917.jpg",
+				"createdAt": "2023-06-08T19:31:40.780Z",
+				"updatedAt": "2023-06-08T19:31:40.780Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"52": {
+				"id": 52,
+				"name": "disney2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "disney2_3034a003f9",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/disney2_3034a003f9.jpg",
+				"createdAt": "2023-06-08T19:31:40.849Z",
+				"updatedAt": "2023-06-08T19:31:40.849Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"53": {
+				"id": 53,
+				"name": "disney.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "disney_5043cc4870",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/disney_5043cc4870.jpg",
+				"createdAt": "2023-06-08T19:31:40.868Z",
+				"updatedAt": "2023-06-08T19:31:40.868Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"54": {
+				"id": 54,
+				"name": "fossil_bannon_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_bannon_men_6510686d0c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_bannon_men_6510686d0c.jpg",
+				"createdAt": "2023-06-08T19:31:41.086Z",
+				"updatedAt": "2023-06-08T19:31:41.086Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"55": {
+				"id": 55,
+				"name": "fossil_bannon_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_bannon_men2_c0cda9a497",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_bannon_men2_c0cda9a497.jpg",
+				"createdAt": "2023-06-08T19:31:41.088Z",
+				"updatedAt": "2023-06-08T19:31:41.088Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"56": {
+				"id": 56,
+				"name": "fossil_gen_6_smart_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_gen_6_smart_men_581f6fed40",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_gen_6_smart_men_581f6fed40.jpg",
+				"createdAt": "2023-06-08T19:31:41.174Z",
+				"updatedAt": "2023-06-08T19:31:41.174Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"57": {
+				"id": 57,
+				"name": "fossil_gen_6_smart_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_gen_6_smart_men2_583a623280",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_gen_6_smart_men2_583a623280.jpg",
+				"createdAt": "2023-06-08T19:31:41.215Z",
+				"updatedAt": "2023-06-08T19:31:41.215Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"58": {
+				"id": 58,
+				"name": "fossil_gen_6_smart_women.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_gen_6_smart_women_2ed73ae277",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_gen_6_smart_women_2ed73ae277.jpg",
+				"createdAt": "2023-06-08T19:31:41.275Z",
+				"updatedAt": "2023-06-08T19:31:41.275Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"59": {
+				"id": 59,
+				"name": "fossil_gen_6_smart_women2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "fossil_gen_6_smart_women2_8fe34f4879",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/fossil_gen_6_smart_women2_8fe34f4879.jpg",
+				"createdAt": "2023-06-08T19:31:41.305Z",
+				"updatedAt": "2023-06-08T19:31:41.305Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"60": {
+				"id": 60,
+				"name": "apple_watch7.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "apple_watch7_11aca1ff25",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/apple_watch7_11aca1ff25.png",
+				"createdAt": "2023-06-08T19:31:41.415Z",
+				"updatedAt": "2023-06-08T19:31:41.415Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"61": {
+				"id": 61,
+				"name": "apple_watch7_2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "apple_watch7_2_1f901bc9f5",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/apple_watch7_2_1f901bc9f5.png",
+				"createdAt": "2023-06-08T19:31:41.501Z",
+				"updatedAt": "2023-06-08T19:31:41.501Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"62": {
+				"id": 62,
+				"name": "head2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "head2_c3ae5c0933",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/head2_c3ae5c0933.png",
+				"createdAt": "2023-06-08T19:31:41.625Z",
+				"updatedAt": "2023-06-08T19:31:41.625Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"63": {
+				"id": 63,
+				"name": "head.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "head_2911c8bf56",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/head_2911c8bf56.png",
+				"createdAt": "2023-06-08T19:31:41.626Z",
+				"updatedAt": "2023-06-08T19:31:41.626Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"64": {
+				"id": 64,
+				"name": "lacoste_kids.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "lacoste_kids_1137b83ff7",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/lacoste_kids_1137b83ff7.png",
+				"createdAt": "2023-06-08T19:31:41.646Z",
+				"updatedAt": "2023-06-08T19:31:41.646Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"65": {
+				"id": 65,
+				"name": "michael_kors_lexington_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "michael_kors_lexington_men_0197ea8b23",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/michael_kors_lexington_men_0197ea8b23.jpg",
+				"createdAt": "2023-06-08T19:31:41.648Z",
+				"updatedAt": "2023-06-08T19:31:41.648Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"66": {
+				"id": 66,
+				"name": "lacoste_kids2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "lacoste_kids2_501c4a1feb",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/lacoste_kids2_501c4a1feb.png",
+				"createdAt": "2023-06-08T19:31:41.733Z",
+				"updatedAt": "2023-06-08T19:31:41.733Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"67": {
+				"id": 67,
+				"name": "michael_kors_lexington_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "michael_kors_lexington_men2_863eb3c6ca",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/michael_kors_lexington_men2_863eb3c6ca.jpg",
+				"createdAt": "2023-06-08T19:31:41.910Z",
+				"updatedAt": "2023-06-08T19:31:41.910Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"68": {
+				"id": 68,
+				"name": "MK_liliane_women2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "MK_liliane_women2_702f969b03",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/MK_liliane_women2_702f969b03.jpg",
+				"createdAt": "2023-06-08T19:31:41.990Z",
+				"updatedAt": "2023-06-08T19:31:41.990Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"69": {
+				"id": 69,
+				"name": "MK_slim_runway_men.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "MK_slim_runway_men_928e00362b",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/MK_slim_runway_men_928e00362b.jpg",
+				"createdAt": "2023-06-08T19:31:42.020Z",
+				"updatedAt": "2023-06-08T19:31:42.020Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"70": {
+				"id": 70,
+				"name": "MK_liliane_women.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "MK_liliane_women_b5ad7ac948",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/MK_liliane_women_b5ad7ac948.jpg",
+				"createdAt": "2023-06-08T19:31:41.992Z",
+				"updatedAt": "2023-06-08T19:31:41.992Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"71": {
+				"id": 71,
+				"name": "mickey_mouse2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "mickey_mouse2_abfb839bed",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/mickey_mouse2_abfb839bed.png",
+				"createdAt": "2023-06-08T19:31:42.042Z",
+				"updatedAt": "2023-06-08T19:31:42.042Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"72": {
+				"id": 72,
+				"name": "polo_men2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "polo_men2_634f503ce5",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/polo_men2_634f503ce5.png",
+				"createdAt": "2023-06-08T19:31:42.186Z",
+				"updatedAt": "2023-06-08T19:31:42.186Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"73": {
+				"id": 73,
+				"name": "MK_slim_runway_men2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "MK_slim_runway_men2_27ea205f69",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/MK_slim_runway_men2_27ea205f69.jpg",
+				"createdAt": "2023-06-08T19:31:42.189Z",
+				"updatedAt": "2023-06-08T19:31:42.189Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"74": {
+				"id": 74,
+				"name": "mickey_mouse.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "mickey_mouse_1504cfa36d",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/mickey_mouse_1504cfa36d.png",
+				"createdAt": "2023-06-08T19:31:42.189Z",
+				"updatedAt": "2023-06-08T19:31:42.189Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"75": {
+				"id": 75,
+				"name": "Polo_men.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "Polo_men_b88ee3a0bf",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/Polo_men_b88ee3a0bf.png",
+				"createdAt": "2023-06-08T19:31:42.412Z",
+				"updatedAt": "2023-06-08T19:31:42.412Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"76": {
+				"id": 76,
+				"name": "swis_male.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "swis_male_00a341718c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/swis_male_00a341718c.jpg",
+				"createdAt": "2023-06-08T19:31:42.424Z",
+				"updatedAt": "2023-06-08T19:31:42.424Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"77": {
+				"id": 77,
+				"name": "swis_male2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "swis_male2_8a52a8838c",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/swis_male2_8a52a8838c.jpg",
+				"createdAt": "2023-06-08T19:31:42.459Z",
+				"updatedAt": "2023-06-08T19:31:42.459Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"78": {
+				"id": 78,
+				"name": "tommy_hilfiger_women.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "tommy_hilfiger_women_784bd59a22",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/tommy_hilfiger_women_784bd59a22.jpg",
+				"createdAt": "2023-06-08T19:31:42.533Z",
+				"updatedAt": "2023-06-08T19:31:42.533Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"79": {
+				"id": 79,
+				"name": "tommy_hilfiger_women2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "tommy_hilfiger_women2_9438939a7d",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/tommy_hilfiger_women2_9438939a7d.jpg",
+				"createdAt": "2023-06-08T19:31:42.600Z",
+				"updatedAt": "2023-06-08T19:31:42.600Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"80": {
+				"id": 80,
+				"name": "mkuu3_vw_pf_watch-44-alum-gold-nc-se_vw_pf_wf_co_geo_ae.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/mkuu3_vw_pf_watch_44_alum_gold_nc_se_vw_pf_wf_co_geo_ae_9192e60e78.jpg",
+				"createdAt": "2023-06-08T19:34:49.147Z",
+				"updatedAt": "2023-06-08T19:34:49.147Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"82": {
+				"id": 82,
+				"name": "gshock_gold2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "gshock_gold2_0c2c0d7a6e",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/gshock_gold2_0c2c0d7a6e.png",
+				"createdAt": "2023-06-12T17:51:23.785Z",
+				"updatedAt": "2023-06-12T18:55:53.259Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"83": {
+				"id": 83,
+				"name": "gshock_gold.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "gshock_gold_331d165b63",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/gshock_gold_331d165b63.png",
+				"createdAt": "2023-06-12T17:52:34.384Z",
+				"updatedAt": "2023-06-12T17:52:34.384Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"84": {
+				"id": 84,
+				"name": "kiddus2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "kiddus2_d728cacef1",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/kiddus2_d728cacef1.png",
+				"createdAt": "2023-06-12T17:59:09.331Z",
+				"updatedAt": "2023-06-12T17:59:09.331Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"85": {
+				"id": 85,
+				"name": "kiddus.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "kiddus_143cacff4b",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/kiddus_143cacff4b.png",
+				"createdAt": "2023-06-12T17:59:09.661Z",
+				"updatedAt": "2023-06-12T17:59:09.661Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"86": {
+				"id": 86,
+				"name": "MarcLauder.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "Marc_Lauder_f2aeaa5196",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/Marc_Lauder_f2aeaa5196.jpg",
+				"createdAt": "2023-06-12T18:06:38.777Z",
+				"updatedAt": "2023-06-12T18:06:38.777Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"87": {
+				"id": 87,
+				"name": "MarcLauder2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "Marc_Lauder2_7ec0242f4e",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/Marc_Lauder2_7ec0242f4e.jpg",
+				"createdAt": "2023-06-12T18:06:38.948Z",
+				"updatedAt": "2023-06-12T18:06:38.948Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"88": {
+				"id": 88,
+				"name": "boss_orange2.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "boss_orange2_0d96b832f3",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/boss_orange2_0d96b832f3.png",
+				"createdAt": "2023-06-12T18:13:50.405Z",
+				"updatedAt": "2023-06-12T18:13:50.405Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"89": {
+				"id": 89,
+				"name": "boss_orange.png",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "boss_orange_278d2db8ae",
+				"ext": ".png",
+				"mime": "image/png",
+				"url": "/uploads/boss_orange_278d2db8ae.png",
+				"createdAt": "2023-06-12T18:13:50.689Z",
+				"updatedAt": "2023-06-12T18:13:50.689Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"98": {
+				"id": 98,
+				"name": "samsung.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "samsung_349571c6fb",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/samsung_349571c6fb.jpg",
+				"createdAt": "2023-06-12T18:28:58.387Z",
+				"updatedAt": "2023-06-12T18:28:58.387Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"99": {
+				"id": 99,
+				"name": "samsung3.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "samsung3_770792e163",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/samsung3_770792e163.jpg",
+				"createdAt": "2023-06-12T18:30:39.601Z",
+				"updatedAt": "2023-06-12T18:30:39.601Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"100": {
+				"id": 100,
+				"name": "tsar_bomb2.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "tsar_bomb2_05f016bbeb",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/tsar_bomb2_05f016bbeb.jpg",
+				"createdAt": "2023-06-12T18:34:15.311Z",
+				"updatedAt": "2023-06-12T18:34:15.311Z",
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"102": {
+				"id": 102,
+				"name": "tsar_bomb.jpg",
+				"alternativeText": null,
+				"caption": null,
+				"hash": "tsar_bomb_7588e4887d",
+				"ext": ".jpg",
+				"mime": "image/jpeg",
+				"url": "/uploads/tsar_bomb_7588e4887d.jpg",
+				"createdAt": "2023-06-12T18:35:48.270Z",
+				"updatedAt": "2023-06-12T18:35:48.270Z",
+				"createdBy": null,
+				"updatedBy": null
+			}
+		},
+		"api::category.category": {
+			"3": {
+				"id": 3,
+				"title": "Men",
+				"desc": "Men's Watches",
+				"createdAt": "2023-06-05T09:00:12.275Z",
+				"updatedAt": "2023-06-07T14:39:15.584Z",
+				"publishedAt": "2023-06-05T09:00:13.391Z",
+				"img": null,
+				"products": [
+					21,
+					22,
+					26,
+					28,
+					29,
+					30,
+					32,
+					34,
+					35,
+					36,
+					37,
+					38,
+					43,
+					44,
+					45
+				],
+				"sub_categories": [
+					7,
+					8,
+					3,
+					4,
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"4": {
+				"id": 4,
+				"title": "Women",
+				"desc": "Women's Watches",
+				"createdAt": "2023-06-05T09:02:23.962Z",
+				"updatedAt": "2023-06-07T14:39:21.265Z",
+				"publishedAt": "2023-06-05T09:02:24.833Z",
+				"img": null,
+				"products": [
+					20,
+					22,
+					23,
+					25,
+					26,
+					31,
+					36,
+					38,
+					39,
+					40,
+					42,
+					44
+				],
+				"sub_categories": [
+					8,
+					3,
+					7,
+					4,
+					6
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"5": {
+				"id": 5,
+				"title": "Kids",
+				"desc": "Kids Watches",
+				"createdAt": "2023-06-07T14:40:05.911Z",
+				"updatedAt": "2023-06-07T14:40:06.852Z",
+				"publishedAt": "2023-06-07T14:40:06.848Z",
+				"img": null,
+				"products": [
+					24,
+					27,
+					33,
+					41
+				],
+				"sub_categories": [
+					6,
+					11
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"6": {
+				"id": 6,
+				"title": "Smart",
+				"desc": "Smart Watches",
+				"createdAt": "2023-06-07T14:40:19.681Z",
+				"updatedAt": "2023-06-07T14:44:28.187Z",
+				"publishedAt": "2023-06-07T14:40:52.008Z",
+				"img": null,
+				"products": [
+					20,
+					26,
+					30,
+					31
+				],
+				"sub_categories": [
+					9,
+					10
+				],
+				"createdBy": null,
+				"updatedBy": null
+			}
+		},
+		"plugin::upload.folder": {}
+	}
+}
