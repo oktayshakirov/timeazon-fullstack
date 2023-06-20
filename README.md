@@ -48,7 +48,33 @@ or
 yarn install
 ```
 
-### Step 3: Navigate to the API Directory
+### Step 4: Connecting your database to the environment
+
+Create a file .env in the main folder of your application
+
+```bash
+# Local Server Configuration
+
+VITE_APP_API_TOKEN=*Place your API key generated py Strapi here*
+VITE_APP_API_URL=http://localhost:1337/api
+VITE_APP_UPLOAD_URL=http://localhost:5173/api/public
+```
+
+```bash
+# # Remote Server Configuration
+
+VITE_APP_API_TOKEN=*Place your API key generated py Strapi here*
+VITE_APP_API_URL=*Your server URL*
+VITE_APP_UPLOAD_URL=http://*server URL*/api/public
+```
+
+You can also fetch the images for the products locally
+
+```bash
+VITE_APP_UPLOAD_URL=/Watches
+```
+
+### Step 5: Navigate to the API Directory
 
 Navigate to the Strapi app, which is in the /api directory within the project:
 
@@ -56,7 +82,7 @@ Navigate to the Strapi app, which is in the /api directory within the project:
 cd api
 ```
 
-### Step 5: Install Dependencies for Strapi App
+### Step 6: Install Dependencies for Strapi App
 
 Install the necessary dependencies for the Strapi app:
 
@@ -70,7 +96,7 @@ or
 yarn install
 ```
 
-### Step 6: Setup Strapi
+### Step 7: Setup Strapi
 
 Follow the instructions in the Strapi documentation to set up your Strapi CMS. You will need to create an .env file in the root of your Strapi directory (/api) and add your database connection string and other environment-specific variables.
 
@@ -96,6 +122,28 @@ or
 
 ```bash
 yarn start
+```
+
+### Step 8: Connecting your database to Strapi
+
+Create .env file in /api and set it accordingly to your database
+
+```bash
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=
+API_TOKEN_SALT=
+ADMIN_JWT_SECRET=
+TRANSFER_TOKEN_SALT=
+# Database
+DATABASE_CLIENT=mysql
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=3306
+DATABASE_NAME=watch_store
+DATABASE_USERNAME=
+DATABASE_PASSWORD=
+DATABASE_SSL=false
+JWT_SECRET=
 ```
 
 Now, you should be able to access the application at http://localhost:3000.
