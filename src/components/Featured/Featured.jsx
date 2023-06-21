@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Featured.scss";
 import Cover from "../Cover/Cover";
 import useFetch from "../../hooks/useFetch";
@@ -11,6 +11,23 @@ const Featured = ({ type }) => {
   const { data, loading, error } = useFetch(
     `/products?populate=*&[filters][type][$eq]=${type}`
   );
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (loading) {
+      timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 5000); // 5 seconds, alert if its still loading
+    } else {
+      setShowPopup(false);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [loading]);
 
   return (
     <div className="featured">
@@ -42,7 +59,22 @@ const Featured = ({ type }) => {
             Please try again later ! &#128533;
           </div>
         ) : loading ? (
-          <div className="loader"></div>
+          <>
+            <div className="loader-wrapper">
+              <div className="loader"></div>
+            </div>
+            {showPopup && (
+              <div className="error-message">
+                Please note that as this is a demo project, it's hosted on a
+                free server that conserves resources by going into sleep mode
+                during periods of inactivity. If the website hasn't been
+                accessed for a while, the server may take up to 30 seconds to
+                wake up and load all the watches from the database. Timeazon
+                greatly appreciates your patience and understanding. Thank you!
+                &#128522
+              </div>
+            )}
+          </>
         ) : (
           data?.map((item) => <Cover item={item} key={item.id} />)
         )}
