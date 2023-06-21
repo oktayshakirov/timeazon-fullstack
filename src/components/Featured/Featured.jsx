@@ -65,13 +65,12 @@ const Featured = ({ type }) => {
             </div>
             {showPopup && (
               <div className="error-message">
-                Please note that as this is a demo project, it's hosted on a
-                free server that conserves resources by going into sleep mode
-                during periods of inactivity. If the website hasn't been
-                accessed for a while, the server may take up to 30 seconds to
-                wake up and load all the watches from the database. Timeazon
-                greatly appreciates your patience and understanding. Thank you!
-                &#128522
+                PThis is a demo project and it's hosted on a free server that is
+                saving resources by going into sleep mode during periods of
+                inactivity when the website hasn't been accessed for a while.
+                The database may take up to 60 seconds to wake up and load all
+                the watches. Timeazon greatly appreciates your patience and
+                understanding. Thank you! &#128522;
               </div>
             )}
           </>
