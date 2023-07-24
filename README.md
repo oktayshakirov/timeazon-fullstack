@@ -12,7 +12,9 @@ One essential feature is the shopping cart system, allowing users to manage thei
 
 ![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
 
-Demo is available [here](https://timeazon.netlify.app/)
+<p align="center">
+  <a href="https://timeazon.netlify.app/"><strong>➥ Live Demo</strong></a>
+</p>
 
 ## Installation
 
