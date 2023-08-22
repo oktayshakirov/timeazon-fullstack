@@ -26,7 +26,7 @@ const Footer = () => {
             <a href="https://www.oktayshakirov.com/">Portfolio</a>
           </span>
           <span>
-            <a href="/https://github.com/oktayshakirov">Github</a>
+            <a href="https://github.com/oktayshakirov">Github</a>
           </span>
           <span>
             <a href="https://www.linkedin.com/in/oktayshakirov">Linkedin</a>
