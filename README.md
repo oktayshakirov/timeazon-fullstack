@@ -2,7 +2,7 @@
 
 This project is an e-commerce platform developed using React.js for the front end and Strapi for the back end. The data is managed using a MySQL database, and design elements have been implemented using Sass, giving the interface a visually pleasing and functional aesthetic which is also responsive to all screen sizes.
 
-![Desktop Demo](http://www.oktayshakirov.com/assets/images/projects/watch_store.png "Desktop Demo")
+![Desktop Demo](https://oktayshakirov.com/assets/images/projects/watch_store.webp "Desktop Demo")
 
 Responsive Interface: Crafted with Sass, the platform's design is not only visually appealing but also fluidly adjusts to all screen sizes.
 An attention-grabbing feature is the automatic slider that updates every seven seconds. Coupled with a navigational bar and dedicated tabs for featured and trending posts.
